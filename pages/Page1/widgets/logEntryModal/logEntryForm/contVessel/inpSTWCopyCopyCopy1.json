@@ -1,10 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
+  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 20,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -16,48 +17,58 @@
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "sourceData"
+      "key": "labelTextSize"
     },
     {
-      "key": "labelTextSize"
+      "key": "onBlur"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onBlur"
+    },
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "TEXT",
   "isDisabled": false,
-  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "2obikwpwfw",
+  "key": "73pw5mt6v7",
+  "label": "Barometer",
   "labelAlignment": "left",
   "labelPosition": "Left",
-  "labelText": "Storm Jib",
+  "labelStyle": "",
   "labelTextColor": "#919191",
   "labelTextSize": "0.675rem",
-  "labelWidth": "16",
+  "labelWidth": "18",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 7,
+  "mobileBottomRow": 15,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 19.000000000000004,
-  "mobileTopRow": 0,
+  "mobileRightColumn": 12.000000000000002,
+  "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "onBlur": "{{inpSTW.setValue(vesselLogEntryForm.formatToOneDecimal(inpSTW.text))}}",
+  "onTextChanged": "",
   "parentColumnSpace": 4.1457763671875,
-  "parentId": "007yr5sz3x",
+  "parentId": "eej6t87vkg",
   "parentRowSpace": 10,
-  "placeholderText": " ",
+  "regex": "^\\d+(?:\\.\\d)?$",
   "renderMode": "CANVAS",
+  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
-  "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"deployed\",\n    \"code\": \"deployed\"\n  },\n  {\n    \"name\": \"not deployed\",\n    \"code\": \"not deployed\"\n  }\n]",
-  "topRow": 4,
-  "type": "SELECT_WIDGET",
-  "version": 1,
-  "widgetId": "8e5r3oz5pb",
-  "widgetName": "selStormJib"
+  "rightColumn": 53,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 16,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "i9a4dubi78",
+  "widgetName": "inpSTWCopyCopyCopy1"
 }

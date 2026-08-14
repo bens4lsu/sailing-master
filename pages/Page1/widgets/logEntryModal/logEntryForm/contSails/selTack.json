@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 20,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -31,7 +31,7 @@
   "key": "2obikwpwfw",
   "labelAlignment": "left",
   "labelPosition": "Left",
-  "labelText": "Genoa",
+  "labelText": "Tack",
   "labelTextColor": "#919191",
   "labelTextSize": "0.675rem",
   "labelWidth": "16",
@@ -54,10 +54,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Full\",\n    \"code\": \"full\"\n  },\n  {\n    \"name\": \"75%\",\n    \"code\": \"75%\"\n  },\n\t{\n    \"name\": \"50%\",\n    \"code\": \"50%\"\n  },\n\t{\n    \"name\": \"25%\",\n    \"code\": \"25%\"\n  },\n\t{\n    \"name\": \"furled\",\n    \"code\": \"furled\"\n  }\n]",
-  "topRow": 8,
+  "sourceData": "[\n  {\n    \"name\": \"Port\",\n    \"code\": \"port\"\n  },\n  {\n    \"name\": \"Starboard\",\n    \"code\": \"starboard\"\n  }\n]",
+  "topRow": 16,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "h4lchf3mec",
-  "widgetName": "selGenoa"
+  "widgetId": "od5ozhvbqu",
+  "widgetName": "selTack"
 }
