@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 20,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -38,7 +38,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "73pw5mt6v7",
-  "label": "TWD",
+  "label": "Barometer",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "",
@@ -63,12 +63,12 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 54,
+  "rightColumn": 53,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 4,
+  "topRow": 16,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "dr0rslwuxg",
-  "widgetName": "inpSTWCopyCopy"
+  "widgetId": "i9a4dubi78",
+  "widgetName": "inpBarometer"
 }

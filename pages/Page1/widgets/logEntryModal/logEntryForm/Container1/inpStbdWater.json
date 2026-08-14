@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 12,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -18,57 +18,47 @@
   "dynamicPropertyPathList": [
     {
       "key": "labelTextSize"
-    },
-    {
-      "key": "onBlur"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onBlur"
-    },
-    {
-      "key": "onTextChanged"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "NUMBER",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "73pw5mt6v7",
-  "label": "Barometer",
+  "label": "Stbd Water",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "",
   "labelTextColor": "#919191",
   "labelTextSize": "0.675rem",
-  "labelWidth": "18",
+  "labelWidth": "16",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
+  "maxNum": "380",
   "minDynamicHeight": 4,
+  "minNum": "0",
   "minWidth": 450,
   "mobileBottomRow": 15,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 12.000000000000002,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "onBlur": "{{inpSTW.setValue(vesselLogEntryForm.formatToOneDecimal(inpSTW.text))}}",
-  "onTextChanged": "",
   "parentColumnSpace": 4.1457763671875,
-  "parentId": "eej6t87vkg",
+  "parentId": "4qsehle0mu",
   "parentRowSpace": 10,
-  "regex": "^\\d+(?:\\.\\d)?$",
+  "regex": "",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 53,
+  "rightColumn": 57,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 16,
+  "topRow": 8,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "i9a4dubi78",
-  "widgetName": "inpSTWCopyCopyCopy1"
+  "widgetId": "2595dllfjx",
+  "widgetName": "inpStbdWater"
 }

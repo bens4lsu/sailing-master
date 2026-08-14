@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "labelTextSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "2obikwpwfw",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelText": "Watermaker",
+  "labelTextColor": "#919191",
+  "labelTextSize": "0.675rem",
+  "labelWidth": "18",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 19.000000000000004,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 4.1457763671875,
+  "parentId": "4qsehle0mu",
+  "parentRowSpace": 10,
+  "placeholderText": " ",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 61,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"on\",\n    \"code\": \"on\"\n  },\n  {\n    \"name\": \"off\",\n    \"code\": \"off\"\n  },\n  {\n    \"name\": \"flush\",\n    \"code\": \"flush\"\n  }\n]\n",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "uhxncdtd5v",
+  "widgetName": "selWatermaker"
+}
