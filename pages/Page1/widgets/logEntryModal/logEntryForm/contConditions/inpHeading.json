@@ -18,9 +18,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "labelTextSize"
+    },
+    {
+      "key": "onBlur"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onBlur"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "NUMBER",
   "isDisabled": false,
@@ -28,13 +35,13 @@
   "isRequired": false,
   "isVisible": true,
   "key": "73pw5mt6v7",
-  "label": "True Wind Ang",
+  "label": "Heading",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "",
   "labelTextColor": "#919191",
   "labelTextSize": "0.675rem",
-  "labelWidth": "21",
+  "labelWidth": "18",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "maxNum": "360",
@@ -46,6 +53,9 @@
   "mobileRightColumn": 12.000000000000002,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
+  "onBlur": "{{inpHeading.setValue(vesselLogEntryForm.formatNegativeCompass(inpHeading.text))}}",
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
   "parentColumnSpace": 4.1457763671875,
   "parentId": "ccfgytyka5",
   "parentRowSpace": 10,
@@ -53,12 +63,12 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 54,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 8,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "91tt9g52z0",
-  "widgetName": "Input1Copy3CopyCopy"
+  "widgetName": "inpHeading"
 }

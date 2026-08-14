@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 4,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -18,17 +18,27 @@
   "dynamicPropertyPathList": [
     {
       "key": "labelTextSize"
+    },
+    {
+      "key": "onBlur"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onBlur"
+    },
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
-  "inputType": "NUMBER",
+  "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "73pw5mt6v7",
-  "label": "Wind Speed",
+  "label": "STW",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "",
@@ -44,19 +54,21 @@
   "mobileRightColumn": 12.000000000000002,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
+  "onBlur": "{{inpSTW.setValue(vesselLogEntryForm.formatToOneDecimal(inpSTW.text))}}",
+  "onTextChanged": "",
   "parentColumnSpace": 4.1457763671875,
   "parentId": "ccfgytyka5",
   "parentRowSpace": 10,
-  "regex": "",
+  "regex": "^\\d+(?:\\.\\d)?$",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 54,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 13,
+  "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "0z0pozvpkx",
-  "widgetName": "Input1Copy3Copy1"
+  "widgetId": "5it5w4hwtz",
+  "widgetName": "inpSTW"
 }

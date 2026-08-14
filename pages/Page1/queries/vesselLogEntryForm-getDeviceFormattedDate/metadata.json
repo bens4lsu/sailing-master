@@ -1,16 +1,12 @@
 {
-  "gitSyncId": "6a7b8f15abbd1e47177637e9_6256000e-cf84-4845-9baf-7c6f6b468c44",
-  "id": "Page1_vesselLogEntryForm.openLogForm",
+  "gitSyncId": "6a7b8f15abbd1e47177637e9_16af3e94-4824-4e12-a26e-2f3efcc8885a",
+  "id": "Page1_vesselLogEntryForm.getDeviceFormattedDate",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [
-        {
-          "name": "rowId"
-        }
-      ],
+      "jsArguments": [],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -26,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "vesselLogEntryForm.openLogForm",
-    "name": "openLogForm",
+    "fullyQualifiedName": "vesselLogEntryForm.getDeviceFormattedDate",
+    "name": "getDeviceFormattedDate",
     "pageId": "Page1",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

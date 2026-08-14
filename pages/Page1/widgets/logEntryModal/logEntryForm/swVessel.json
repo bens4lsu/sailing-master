@@ -19,9 +19,9 @@
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "rxrzzo321c",
-  "label": "Engine",
+  "label": "Vessel",
   "labelPosition": "Right",
   "labelTextColor": "#919191",
   "labelTextSize": "0.675rem",
@@ -45,5 +45,5 @@
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "ixjg7rx0cp",
-  "widgetName": "swConditions"
+  "widgetName": "swVessel"
 }
