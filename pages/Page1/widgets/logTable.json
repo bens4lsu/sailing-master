@@ -1640,7 +1640,7 @@
   "searchKey": "",
   "tableData": "{{vesselLog.get.data}}",
   "textSize": "0.775rem",
-  "topRow": 17,
+  "topRow": 13,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

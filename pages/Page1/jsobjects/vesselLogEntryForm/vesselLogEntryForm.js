@@ -22,14 +22,16 @@ export default {
 		return num.toString();
 	},
 	
-	getDefaults: () => {
-		const dt = getDeviceFormattedDate();
-		return { 
-			latitude : appsmith.geolocation.currentPosition.coords.latitude,
-			longitude : appsmith.geolocation.currentPosition.coords.longitude,
+	handleNewClick: async () => {
+		const dt = this.getDeviceFormattedDate();
+		await appsmith.geolocation.getCurrentPosition();
+		await storeValue('formDefaults', {
+			latitude: appsmith.geolocation.currentPosition.coords.latitude,
+			longitude: appsmith.geolocation.currentPosition.coords.longitude,
 			title: dt,
-		  time : dt
-		}
+			time: dt
+		});
+		showModal('logEntryModal');
 	},
 	
 	getDeviceFormattedDate: () => {

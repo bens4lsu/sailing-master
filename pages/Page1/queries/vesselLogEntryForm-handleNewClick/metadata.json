@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a7b8f15abbd1e47177637e9_0afe29b6-4187-4d9d-8c77-0af49ce44e6d",
-  "id": "Page1_vesselLogEntryForm.getDefaults",
+  "id": "Page1_vesselLogEntryForm.handleNewClick",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "vesselLogEntryForm.getDefaults",
-    "name": "getDefaults",
+    "fullyQualifiedName": "vesselLogEntryForm.handleNewClick",
+    "name": "handleNewClick",
     "pageId": "Page1",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
