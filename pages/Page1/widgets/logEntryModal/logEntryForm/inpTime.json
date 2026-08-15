@@ -3,15 +3,18 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 9,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{appsmith.store.formDefaults.entry_datetime\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -35,7 +38,7 @@
   "labelTextColor": "#919191",
   "labelTextSize": "0.675rem",
   "labelWidth": 5,
-  "leftColumn": 19,
+  "leftColumn": 25,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -50,7 +53,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 48,
+  "rightColumn": 47,
   "showStepArrows": false,
   "topRow": 4,
   "type": "INPUT_WIDGET_V2",
