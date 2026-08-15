@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 28,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.formDefaults.point_of_sail\n))(selGenoaCopyCopyCopy.options, selGenoaCopyCopyCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.formDefaults.point_of_sail\n))(selPOS.options, selPOS.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -62,5 +62,5 @@
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "j3qzuqmemg",
-  "widgetName": "selGenoaCopyCopyCopy"
+  "widgetName": "selPOS"
 }

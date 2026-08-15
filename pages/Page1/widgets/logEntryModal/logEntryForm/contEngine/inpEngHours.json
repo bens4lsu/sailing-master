@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 24,
   "boxShadow": "none",
-  "defaultText": "{{appsmith.store.formDefaults.temp\n}}",
+  "defaultText": "{{appsmith.store.formDefaults.hours\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -31,7 +31,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "73pw5mt6v7",
-  "label": "Temp",
+  "label": "Eng Hrs",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "",
@@ -41,6 +41,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "minNum": "0",
   "minWidth": 450,
   "mobileBottomRow": 15,
   "mobileLeftColumn": 0,
@@ -54,12 +55,12 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 57,
+  "rightColumn": 63,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 16,
+  "topRow": 20,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "46lrkkvrcx",
-  "widgetName": "Input1Copy1"
+  "widgetId": "odm0tyk9uc",
+  "widgetName": "inpEngHours"
 }
