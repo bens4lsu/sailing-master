@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 20,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.formDefaults.house_battery_life\n}}",
   "dynamicBindingPathList": [
@@ -61,7 +61,7 @@
   "rightColumn": 54,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 12,
+  "topRow": 16,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "0z0pozvpkx",

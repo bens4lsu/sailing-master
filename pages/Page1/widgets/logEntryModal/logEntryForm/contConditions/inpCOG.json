@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 16,
   "boxShadow": "none",
-  "defaultText": "{{appsmith.store.formDefaults.true_wind_angle}}",
+  "defaultText": "{{appsmith.store.formDefaults.heading\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -29,19 +29,16 @@
   "dynamicTriggerPathList": [
     {
       "key": "onBlur"
-    },
-    {
-      "key": "onTextChanged"
     }
   ],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "NUMBER",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
   "key": "73pw5mt6v7",
-  "label": "TWA",
+  "label": "COG",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "",
@@ -50,28 +47,31 @@
   "labelWidth": "18",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
+  "maxNum": "360",
   "minDynamicHeight": 4,
+  "minNum": "-180",
   "minWidth": 450,
   "mobileBottomRow": 15,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 12.000000000000002,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "onBlur": "{{inpTWA.setValue(vesselLogEntryForm.formatNegativeCompass.data(inpTWA.text))}}",
-  "onTextChanged": "",
+  "onBlur": "{{inpHeading.setValue(vesselLogEntryForm.formatNegativeCompass(inpHeading.text))}}",
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
   "parentColumnSpace": 4.1457763671875,
-  "parentId": "eej6t87vkg",
+  "parentId": "ccfgytyka5",
   "parentRowSpace": 10,
-  "regex": "^\\d+(?:\\.\\d)?$",
+  "regex": "",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 54,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 8,
+  "topRow": 12,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "j0q3t3nsvv",
-  "widgetName": "inpTWA"
+  "widgetId": "04dyidzgrh",
+  "widgetName": "inpCOG"
 }

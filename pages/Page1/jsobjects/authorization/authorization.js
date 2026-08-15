@@ -12,7 +12,7 @@ export default {
       const response = await auth_token.run();
 
       // Get expiry duration from API (e.g., response.expires_in seconds), or fallback (e.g., 3600s / 1hr)
-      const expiresInSeconds = response.expires_in || 3600;
+      const expiresInSeconds = response.expires_in || 3000;
       const expirationDate = new Date(now + expiresInSeconds * 1000).toISOString();
 
       await storeValue('bearerToken', response.access_token);
@@ -23,7 +23,7 @@ export default {
     }
 
     console.log('Using existing valid token');
-    //return token;
+    return token;
   }
 }
 

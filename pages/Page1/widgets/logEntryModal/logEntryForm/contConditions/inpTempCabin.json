@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 24,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.formDefaults.temp_cabin\n}}",
   "dynamicBindingPathList": [
@@ -59,7 +59,7 @@
   "rightColumn": 54,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 16,
+  "topRow": 20,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "japisoms6w",
