@@ -57,7 +57,7 @@
   "mobileRightColumn": 12.000000000000002,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "onBlur": "{{inpTWD.setValue(vesselLogEntryForm.formatNegativeCompass.data(inpTWD.text))}}",
+  "onBlur": "{{inpTWD.setValue(vesselLogEntryForm.formatNegativeCompass(inpTWD.text))}}",
   "onTextChanged": "",
   "parentColumnSpace": 4.1457763671875,
   "parentId": "eej6t87vkg",

@@ -54,7 +54,7 @@
     "dynamicBindingPathList": [],
     "name": "auth_token",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

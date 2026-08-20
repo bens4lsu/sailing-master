@@ -24,9 +24,45 @@
     },
     {
       "key": "groupButtons.groupButtonpk01h7uuzz.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonz4kgmvbxkw.buttonColor"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonpk01h7uuzz.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonz4kgmvbxkw.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonpk01h7uuzz.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonz4kgmvbxkw.onClick"
+    }
+  ],
   "groupButtons": {
     "groupButton1": {
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -39,6 +75,7 @@
       "isVisible": true,
       "label": "Full",
       "menuItems": {},
+      "onClick": "{{\n   storeValue('tableFilter', 'all');\n\n}}",
       "placement": "CENTER",
       "widgetId": ""
     },
@@ -53,12 +90,13 @@
       "isVisible": true,
       "label": "Fuel",
       "menuItems": {},
+      "onClick": "{{\n   storeValue('tableFilter', 'fuel');\n   \n}}",
       "placement": "CENTER",
       "widgetId": ""
     },
     "groupButton3": {
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-      "buttonType": "MENU",
+      "buttonType": "SIMPLE",
       "disabledWhenInvalid": false,
       "iconName": "more",
       "id": "groupButton3",
@@ -105,6 +143,7 @@
           "widgetId": ""
         }
       },
+      "onClick": "{{\n   storeValue('tableFilter', 'water');\n\n}}",
       "placement": "CENTER",
       "widgetId": ""
     },
@@ -117,11 +156,28 @@
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Speed",
+      "label": "Weather",
       "menuItems": {},
+      "onClick": "{{\n   storeValue('tableFilter', 'weather');\n\n}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "hd05cru4t7"
+    },
+    "groupButtonz4kgmvbxkw": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonz4kgmvbxkw",
+      "index": 4,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Narrative",
+      "menuItems": {},
+      "onClick": "{{\n   storeValue('tableFilter', 'narrative');\n\n}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "jvkhhmub6y"
     }
   },
   "isCanvas": false,

@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6a7b8f15abbd1e47177637e9_ff2d525b-7813-4af4-83aa-04c756cdef86",
-  "id": "Page1_vesselLogEntryForm.upsertEditedData",
+  "gitSyncId": "6a7b8f15abbd1e47177637e9_9b371449-cf49-4e26-adff-1f59fcec9943",
+  "id": "Page1_vesselLogEntryForm.submitLogDelete",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "vesselLogEntryForm.upsertEditedData",
-    "name": "upsertEditedData",
+    "fullyQualifiedName": "vesselLogEntryForm.submitLogDelete",
+    "name": "submitLogDelete",
     "pageId": "Page1",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

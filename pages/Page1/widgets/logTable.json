@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": false,
+  "allowAddNewRow": true,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -38,12 +38,13 @@
     "vessel_id",
     "title",
     "entry_datetime",
-    "position",
+    "latitude",
+    "longitude",
     "stw",
     "sog",
     "heading",
     "cog",
-    "status",
+    "engine_status",
     "overdrive",
     "rpm",
     "temp",
@@ -72,12 +73,14 @@
     "narrative",
     "created_datetime",
     "created_user",
-    "latitude",
-    "longitude"
+    "modified_datetime",
+    "modified_user"
   ],
-  "columnUpdatedAt": 1786759471810,
+  "columnUpdatedAt": 1787088151198,
   "columnWidthMap": {
-    "customColumn1": 61
+    "customColumn1": 61,
+    "id": 337,
+    "true_wind_direction": 145
   },
   "compactMode": "DEFAULT",
   "customIsLoading": false,
@@ -97,9 +100,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "primaryColumns.id.computedValue"
@@ -126,9 +126,6 @@
       "key": "primaryColumns.entry_datetime.computedValue"
     },
     {
-      "key": "primaryColumns.position.computedValue"
-    },
-    {
       "key": "primaryColumns.stw.computedValue"
     },
     {
@@ -139,9 +136,6 @@
     },
     {
       "key": "primaryColumns.cog.computedValue"
-    },
-    {
-      "key": "primaryColumns.status.computedValue"
     },
     {
       "key": "primaryColumns.overdrive.computedValue"
@@ -232,6 +226,117 @@
     },
     {
       "key": "primaryColumns.longitude.computedValue"
+    },
+    {
+      "key": "primaryColumns.modified_datetime.computedValue"
+    },
+    {
+      "key": "primaryColumns.modified_user.computedValue"
+    },
+    {
+      "key": "primaryColumns.engine_status.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.latitude.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.longitude.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.stw.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.sog.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.heading.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.cog.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.engine_status.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.overdrive.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.rpm.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.fuel.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.temp.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.hours.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.mileage.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.main_sail.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.storm_jib.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.genoa.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.code_zero.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.wind_speed.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.barometer.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.true_wind_angle.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.true_wind_direction.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.sea_state.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.weather.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.house_battery_life.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.watermaker.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.temp_cabin.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.temp_tech_room.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.tack.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.heel_angle.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.point_of_sail.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.water_starboard.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.water_port.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.narrative.isCellVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -240,6 +345,105 @@
     },
     {
       "key": "textSize"
+    },
+    {
+      "key": "primaryColumns.latitude.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.longitude.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.stw.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.sog.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.heading.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.cog.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.engine_status.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.overdrive.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.rpm.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.fuel.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.temp.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.hours.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.mileage.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.main_sail.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.storm_jib.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.genoa.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.code_zero.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.wind_speed.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.barometer.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.true_wind_angle.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.true_wind_direction.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.sea_state.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.weather.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.house_battery_life.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.watermaker.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.temp_cabin.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.temp_tech_room.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.tack.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.heel_angle.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.point_of_sail.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.water_starboard.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.water_port.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.narrative.isCellVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -253,7 +457,7 @@
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
-  "isSortable": false,
+  "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
   "isVisibleFilters": false,
@@ -287,9 +491,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "barometer",
-      "index": 22,
+      "index": 20,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -321,9 +525,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "code_zero",
-      "index": 20,
+      "index": 18,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -355,9 +559,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "cog",
-      "index": 9,
+      "index": 7,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -389,7 +593,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "created_datetime",
-      "index": 37,
+      "index": 35,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -397,7 +601,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "created_datetime",
       "notation": "standard",
       "originalId": "created_datetime",
@@ -423,7 +627,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "created_user",
-      "index": 38,
+      "index": 36,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -431,7 +635,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "created_user",
       "notation": "standard",
       "originalId": "created_user",
@@ -483,13 +687,47 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "engine_status": {
+      "alias": "engine_status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"engine_status\"])) : engine_status })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "engine_status",
+      "index": 40,
+      "isCellEditable": false,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\" })()}}",
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "engine_status",
+      "notation": "standard",
+      "originalId": "engine_status",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.775rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "entry_datetime": {
       "alias": "entry_datetime",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"entry_datetime\"])) : entry_datetime })()}}",
+      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"entry_datetime\")) : currentRow[\"entry_datetime\" })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -531,9 +769,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "fuel",
-      "index": 15,
+      "index": 13,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -565,9 +803,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "genoa",
-      "index": 19,
+      "index": 17,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -599,9 +837,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "heading",
-      "index": 8,
+      "index": 6,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -633,9 +871,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "heel_angle",
-      "index": 32,
+      "index": 30,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -667,9 +905,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "hours",
-      "index": 14,
+      "index": 12,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -701,9 +939,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "house_battery_life",
-      "index": 27,
+      "index": 25,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -769,9 +1007,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "latitude",
-      "index": 38,
+      "index": 37,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -803,9 +1041,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "longitude",
-      "index": 39,
+      "index": 38,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -837,9 +1075,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "main_sail",
-      "index": 17,
+      "index": 15,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -862,7 +1100,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "number",
       "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mileage\"])) : mileage })()}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -871,9 +1109,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "mileage",
-      "index": 16,
+      "index": 14,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -883,6 +1121,74 @@
       "label": "mileage",
       "notation": "standard",
       "originalId": "mileage",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.775rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "modified_datetime": {
+      "alias": "modified_datetime",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"modified_datetime\"])) : modified_datetime })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "modified_datetime",
+      "index": 38,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "modified_datetime",
+      "notation": "standard",
+      "originalId": "modified_datetime",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.775rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "modified_user": {
+      "alias": "modified_user",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"modified_user\"])) : modified_user })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "modified_user",
+      "index": 39,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "modified_user",
+      "notation": "standard",
+      "originalId": "modified_user",
       "sticky": "",
       "textColor": "",
       "textSize": "0.775rem",
@@ -905,9 +1211,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "narrative",
-      "index": 36,
+      "index": 34,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"narrative\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"narrative\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -939,9 +1245,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "overdrive",
-      "index": 11,
+      "index": 9,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -973,9 +1279,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "point_of_sail",
-      "index": 33,
+      "index": 31,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -985,40 +1291,6 @@
       "label": "point_of_sail",
       "notation": "standard",
       "originalId": "point_of_sail",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.775rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "position": {
-      "alias": "position",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"position\"])) : position })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "position",
-      "index": 5,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "position",
-      "notation": "standard",
-      "originalId": "position",
       "sticky": "",
       "textColor": "",
       "textSize": "0.775rem",
@@ -1041,9 +1313,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "rpm",
-      "index": 12,
+      "index": 10,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"fuel\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1075,9 +1347,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "sea_state",
-      "index": 25,
+      "index": 23,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1109,9 +1381,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "sog",
-      "index": 7,
+      "index": 5,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1121,40 +1393,6 @@
       "label": "sog",
       "notation": "standard",
       "originalId": "sog",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.775rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "status": {
-      "alias": "status",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"status\"])) : status })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "status",
-      "index": 10,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "status",
-      "notation": "standard",
-      "originalId": "status",
       "sticky": "",
       "textColor": "",
       "textSize": "0.775rem",
@@ -1177,9 +1415,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "storm_jib",
-      "index": 18,
+      "index": 16,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1211,9 +1449,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "stw",
-      "index": 6,
+      "index": 4,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1245,9 +1483,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "tack",
-      "index": 31,
+      "index": 29,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1279,9 +1517,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "temp",
-      "index": 13,
+      "index": 11,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1313,9 +1551,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "temp_cabin",
-      "index": 29,
+      "index": 27,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1347,9 +1585,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "temp_tech_room",
-      "index": 30,
+      "index": 28,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1415,9 +1653,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "true_wind_angle",
-      "index": 24,
+      "index": 22,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1441,7 +1679,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"true_wind_direction\"])) : true_wind_direction })()}}",
+      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"true_wind_direction\"])) : currentRow[\"true_wind_direction\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -1449,9 +1687,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "true_wind_direction",
-      "index": 23,
+      "index": 21,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1517,9 +1755,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "water_port",
-      "index": 35,
+      "index": 33,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1551,9 +1789,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "water_starboard",
-      "index": 34,
+      "index": 32,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" )) : appsmith.store.tableFilter == \"all\"  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1585,9 +1823,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "watermaker",
-      "index": 28,
+      "index": 26,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"water\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"water\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1619,9 +1857,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "weather",
-      "index": 26,
+      "index": 24,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1653,9 +1891,9 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "wind_speed",
-      "index": 21,
+      "index": 19,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\")) : appsmith.store.tableFilter == \"all\" || appsmith.store.tableFilter == \"weather\" })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -1678,7 +1916,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{vesselLog.get.data}}",
+  "tableData": "{{vesselLog.getFilteredData();}}",
   "textSize": "0.775rem",
   "topRow": 13,
   "totalRecordsCount": 0,
