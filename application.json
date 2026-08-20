@@ -14,7 +14,7 @@
       "navStyle": "sidebar",
       "orientation": "side",
       "position": "static",
-      "showNavbar": false,
+      "showNavbar": true,
       "showSignIn": true
     },
     "themeSetting": {
@@ -30,8 +30,24 @@
   "icon": "saturn",
   "pages": [
     {
-      "id": "Page1",
+      "id": "Ship's Log",
       "isDefault": true
+    },
+    {
+      "id": "Contacts",
+      "isDefault": false
+    },
+    {
+      "id": "Maintenance Log",
+      "isDefault": false
+    },
+    {
+      "id": "To Do",
+      "isDefault": false
+    },
+    {
+      "id": "Real Time Tracking",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
@@ -48,7 +64,7 @@
       "navStyle": "sidebar",
       "orientation": "side",
       "position": "static",
-      "showNavbar": false,
+      "showNavbar": true,
       "showSignIn": true
     },
     "themeSetting": {

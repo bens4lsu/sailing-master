@@ -1,0 +1,41 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 131,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ypc9k87lte",
+  "leftColumn": 0,
+  "mobileBottomRow": 68,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 36,
+  "needsErrorInfo": false,
+  "originalBottomRow": 138,
+  "originalTopRow": 18,
+  "parentColumnSpace": 20.21875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "source": "https://www.predictwind.com/tracking/VelvetElvis",
+  "topRow": 11,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "bgn9wew9s7",
+  "widgetName": "Iframe1"
+}
