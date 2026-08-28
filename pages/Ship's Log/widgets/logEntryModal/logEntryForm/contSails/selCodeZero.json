@@ -57,7 +57,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Full\",\n    \"code\": \"full\"\n  },\n  {\n    \"name\": \"75%\",\n    \"code\": \"75%\"\n  },\n\t{\n    \"name\": \"50%\",\n    \"code\": \"50%\"\n  },\n\t{\n    \"name\": \"25%\",\n    \"code\": \"25%\"\n  },\n\t{\n    \"name\": \"furled\",\n    \"code\": \"furled\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": \"deployed\",\n    \"code\": \"deployed\"\n  },\n  {\n    \"name\": \"not deployed\",\n    \"code\": \"not deployed\"\n  }\n]",
   "topRow": 12,
   "type": "SELECT_WIDGET",
   "version": 1,

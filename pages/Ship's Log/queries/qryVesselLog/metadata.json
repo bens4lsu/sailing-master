@@ -31,6 +31,10 @@
         {
           "key": "vessel_id",
           "value": "eq.{{appsmith.store.vessel.id}}"
+        },
+        {
+          "key": "order",
+          "value": "entry_datetime.desc"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -45,6 +49,9 @@
     "dynamicBindingPathList": [
       {
         "key": "headers[0].value"
+      },
+      {
+        "key": "path"
       },
       {
         "key": "queryParameters[0].value"

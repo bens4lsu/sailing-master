@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.formDefaults.weather\n))(selWeather.options, selWeather.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "labelTextSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "2obikwpwfw",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelText": "Weather",
+  "labelTextColor": "#919191",
+  "labelTextSize": "0.675rem",
+  "labelWidth": "18",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 19.000000000000004,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "parentColumnSpace": 4.1457763671875,
+  "parentId": "eej6t87vkg",
+  "parentRowSpace": 10,
+  "placeholderText": " ",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"clear\",\n    \"code\": \"clear\"\n  },\n  {\n    \"name\": \"clear with a few clouds\",\n    \"code\": \"clear with a few clouds\"\n  },\n  {\n    \"name\": \"partly cloudy\",\n    \"code\": \"partly cloudy\"\n  },\n  {\n    \"name\": \"cloudy\",\n    \"code\": \"cloudy\"\n  },\n  {\n    \"name\": \"light rain\",\n    \"code\": \"light rain\"\n  },\n  {\n    \"name\": \"heavy rain\",\n    \"code\": \"heavy rain\"\n  },\n  {\n    \"name\": \"winter precipitation\",\n    \"code\": \"winter precipitation\"\n  },\n  {\n    \"name\": \"storm\",\n    \"code\": \"storm\"\n  }\n]\n",
+  "topRow": 20,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "c4vq669rsn",
+  "widgetName": "selWeather"
+}

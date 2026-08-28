@@ -45,16 +45,12 @@ export default {
         (e.narrative !== null && e.narrative.trim() !== "")
       );
 		}
-		
-		
-		else if (["water", "weather", "narrative"].includes(filter)) {
-      filteredData = logData;
-    }
 
     const sortedData = [...filteredData].sort((a, b) => 
       new Date(b.entry_datetime) - new Date(a.entry_datetime)
     );
 		
 		return filteredData;
-  }
+  },
+	
 }

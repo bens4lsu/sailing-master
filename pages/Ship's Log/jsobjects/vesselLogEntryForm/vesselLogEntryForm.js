@@ -1,5 +1,9 @@
 export default {
 	
+	useNarrowForm: () => {
+		return (window.innerWidth < 768);	
+	},
+	
 	formatToOneDecimal: (inputValue) => {
 		const num = parseFloat(inputValue);
 		if (isNaN(num)) {
@@ -64,10 +68,15 @@ export default {
 			"water_port": "",
 			"narrative": ""
 		}); 
-		showModal('logEntryModal');
+		if (deviceType === "mobile") {
+      showModal("logEntryModalNarrow");
+    } else {
+      showModal("logEntryModal");
+		}
 	},
 	
 	handleEditClick: async (rowData) => {
+		console.log(rowData);
 		await storeValue('formDefaults', {
 			id: rowData.id || "ERROR", 
 			"title": rowData.title || "",
@@ -106,7 +115,11 @@ export default {
 			"water_port": rowData.water_port || "",
 			"narrative": rowData.narrative || ""
 		}); 
-		showModal('logEntryModal');
+		if (deviceType === "mobile") {
+      showModal("logEntryModalNarrow");
+    } else {
+      showModal("logEntryModal");
+		}
 	},
 	
 	getDeviceFormattedDate: () => {
@@ -179,6 +192,56 @@ export default {
 			"created_datetime": dt,
 			"created_user": user,
 			"modified_datetime": dt,
+			"modified_user": user,
+			"engine_status": this.nullIfBlank(selEngine.selectedOptionValue)
+		};
+		return payload;
+	},
+	
+	upsertPayloadNarrow: () => {
+	  const dt = this.getDeviceFormattedDate();
+		const user = appsmith.store.userData.name;
+		const payload = {
+			"id": inpIdCopy.text,
+			"vessel_id": appsmith.store.vessel.id,
+			"title": inpTitleCopy.text,
+			"entry_datetime": inpTimeCopy.text,
+			"latitude": this.nullIfBlank(inpLatCopy.text),
+			"longitude" : this.nullIfBlank(inpLongCopy.text),
+			"stw": this.nullIfBlank(inpSTWCopy.text),
+			"sog": this.nullIfBlank(inpSOGCopy.text),
+			"heading": this.nullIfBlank(inpHeadingCopy.text),
+			"cog": this.nullIfBlank(inpCOGCopy.text),
+			"engine_status": this.nullIfBlank(selEngineCopy.selectedOptionValue),
+			"overdrive": this.nullIfBlank(selOverdriveCopy.selectedOptionValue),
+			"rpm": this.nullIfBlank(inpRPMCopy.text),
+			"temp": this.nullIfBlank(inpTempCopy.text),
+			"hours": this.nullIfBlank(inpEngHoursCopy.text),
+			"fuel": this.nullIfBlank(inpFuelCopy.text),
+			"mileage": this.nullIfBlank(inpMileageCopy.text),
+			"main_sail": this.nullIfBlank(selMainCopy.selectedOptionValue),
+			"storm_jib": this.nullIfBlank(selStormJibCopy.selectedOptionValue),
+			"genoa": this.nullIfBlank(selGenoaCopy.selectedOptionValue),
+			"code_zero": this.nullIfBlank(selCodeZeroCopy.selectedOptionValue),
+			"wind_speed": this.nullIfBlank(inpWindSpdCopy.text),
+			"barometer": this.nullIfBlank(inpBarometerCopy.text),
+			"true_wind_direction": this.nullIfBlank(inpTWDCopy.text),
+			"true_wind_angle": this.nullIfBlank(inpTWACopy.text),
+			"sea_state": this.nullIfBlank(selSeaStateCopy.selectedOptionValue),
+			"weather": this.nullIfBlank(selWeatherCopy.selectedOptionValue),
+			"house_battery_life": this.nullIfBlank(inpBattCopy.text),
+			"watermaker": this.nullIfBlank(selWatermakerCopy.selectedOptionValue),
+			"temp_cabin": this.nullIfBlank(inpTempCabinCopy.text),
+			"temp_tech_room": this.nullIfBlank(inpTempTechCopy.text),
+			"tack": this.nullIfBlank(selTackCopy.selectedOptionValue),
+			"heel_angle": this.nullIfBlank(inpHeelAngleCopy.text),
+			"point_of_sail": this.nullIfBlank(selPOSCopy.selectedOptionValue),
+			"water_starboard": this.nullIfBlank(inpStbdWaterCopy.text),
+			"water_port": this.nullIfBlank(inpWaterPortCopy.text),
+			"narrative": this.nullIfBlank(inpNotesCopy.text),
+			"created_datetime": dt,
+			"created_user": user,
+			"modified_datetime": dt,
 			"modified_user": user
 		};
 		return payload;
@@ -188,12 +251,21 @@ export default {
     if (typeof str === "string") {
         return str.trim() === "" ? null : str;
     } else {
-        return null;
+        return str;
     }
 	},
 	
 	submitLogUpdate: async () => {
 		await authorization.refreshTokenIfNeeded(); 
+		await storeValue('upsertPayload', this.upsertPayload())
+		await qryUpsertLogEntry.run();
+		await vesselLog.getLogDataFromDB();
+		closeModal('logEntryModal');
+	},
+	
+	submitLogUpdateNarrow: async () => {
+		await authorization.refreshTokenIfNeeded(); 
+		await storeValue('upsertPayload', this.upsertPayloadNarrow())
 		await qryUpsertLogEntry.run();
 		await vesselLog.getLogDataFromDB();
 		closeModal('logEntryModal');

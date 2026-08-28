@@ -19,7 +19,7 @@
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": false,
+  "isVisible": true,
   "key": "rxrzzo321c",
   "label": "Vessel",
   "labelPosition": "Right",

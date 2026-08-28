@@ -1,0 +1,49 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 175,
+  "boxShadow": "none",
+  "buttonColor": "#b91c1c",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "t7w9efks4z",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 109,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 105,
+  "needsErrorInfo": false,
+  "onClick": "{{vesselLogEntryForm.submitLogDelete();}}",
+  "originalBottomRow": 175,
+  "originalTopRow": 171,
+  "parentColumnSpace": 10.110253906249998,
+  "parentId": "ac62708tsm",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 13,
+  "text": "Delete",
+  "topRow": 171,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2pk97y9orm",
+  "widgetName": "btnDeleteCopy"
+}

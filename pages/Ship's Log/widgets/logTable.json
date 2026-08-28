@@ -76,10 +76,12 @@
     "modified_datetime",
     "modified_user"
   ],
-  "columnUpdatedAt": 1787088151198,
+  "columnUpdatedAt": 1787948881294,
   "columnWidthMap": {
     "customColumn1": 61,
+    "entry_datetime": 211,
     "id": 337,
+    "title": 151,
     "true_wind_direction": 145
   },
   "compactMode": "DEFAULT",
@@ -106,15 +108,6 @@
     },
     {
       "key": "oddRowColor"
-    },
-    {
-      "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
-      "key": "primaryColumns.customColumn1.borderRadius"
-    },
-    {
-      "key": "primaryColumns.customColumn1.boxShadow"
     },
     {
       "key": "primaryColumns.vessel_id.computedValue"
@@ -337,6 +330,15 @@
     },
     {
       "key": "primaryColumns.narrative.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -655,7 +657,6 @@
       "boxShadow": "{{logTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{logTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonStyle": "rgb(3, 179, 101)",
-      "buttonVariant": "PRIMARY",
       "columnType": "iconButton",
       "computedValue": "",
       "currencyCode": "USD",
@@ -678,7 +679,7 @@
       "label": "Edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{vesselLogEntryForm.handleEditClick(currentRow);}}",
+      "onClick": "{{vesselLogEntryForm.handleEditClick(currentRow, '\"mobile\"');}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.775rem",
@@ -1918,7 +1919,7 @@
   "searchKey": "",
   "tableData": "{{vesselLog.getFilteredData();}}",
   "textSize": "0.775rem",
-  "topRow": 13,
+  "topRow": 5,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
