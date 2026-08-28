@@ -1,9 +1,5 @@
 export default {
 	
-	useNarrowForm: () => {
-		return (window.innerWidth < 768);	
-	},
-	
 	formatToOneDecimal: (inputValue) => {
 		const num = parseFloat(inputValue);
 		if (isNaN(num)) {
@@ -36,7 +32,7 @@ export default {
 			"entry_datetime": dt,
 			latitude: appsmith.geolocation.currentPosition.coords.latitude,
 			longitude: appsmith.geolocation.currentPosition.coords.longitude,
-			engine: "",
+			engine_status: "",
 			"stw": "",
 			"sog": "",
 			"heading": "",
@@ -68,15 +64,14 @@ export default {
 			"water_port": "",
 			"narrative": ""
 		}); 
-		if (deviceType === "mobile") {
-      showModal("logEntryModalNarrow");
+		if (Custom1.model?.isNarrow) {
+      showModal(logEntryModelNarrow.name);
     } else {
-      showModal("logEntryModal");
+      showModal(logEntryModal.name);
 		}
 	},
 	
 	handleEditClick: async (rowData) => {
-		console.log(rowData);
 		await storeValue('formDefaults', {
 			id: rowData.id || "ERROR", 
 			"title": rowData.title || "",
@@ -115,10 +110,10 @@ export default {
 			"water_port": rowData.water_port || "",
 			"narrative": rowData.narrative || ""
 		}); 
-		if (deviceType === "mobile") {
-      showModal("logEntryModalNarrow");
+		if (Custom1.model?.isNarrow) {
+      showModal(logEntryModelNarrow.name);
     } else {
-      showModal("logEntryModal");
+      showModal(logEntryModal.name);
 		}
 	},
 	
@@ -193,7 +188,6 @@ export default {
 			"created_user": user,
 			"modified_datetime": dt,
 			"modified_user": user,
-			"engine_status": this.nullIfBlank(selEngine.selectedOptionValue)
 		};
 		return payload;
 	},

@@ -446,6 +446,9 @@
     },
     {
       "key": "primaryColumns.narrative.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -679,7 +682,7 @@
       "label": "Edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{vesselLogEntryForm.handleEditClick(currentRow, '\"mobile\"');}}",
+      "onClick": "{{vesselLogEntryForm.handleEditClick(logTable.triggeredRow)}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.775rem",
@@ -728,7 +731,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"entry_datetime\")) : currentRow[\"entry_datetime\" })()}}",
+      "computedValue": "{{(() => { const tableData = logTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"entry_datetime\"])) : currentRow[\"entry_datetime\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
