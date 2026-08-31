@@ -32,7 +32,7 @@
   "mobileRightColumn": 46,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(logEntryModal.name);}}",
+  "onClick": "{{closeModal(logEntryModalNarrow.name);}}",
   "originalBottomRow": 175,
   "originalTopRow": 171,
   "parentId": "ac62708tsm",

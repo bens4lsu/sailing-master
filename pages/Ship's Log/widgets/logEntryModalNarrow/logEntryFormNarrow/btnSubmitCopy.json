@@ -36,7 +36,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{vesselLogEntryForm.submitLogUpdate();}}",
+  "onClick": "{{vesselLogEntryForm.submitLogUpdateNarrow();}}",
   "originalBottomRow": 175,
   "originalTopRow": 171,
   "parentId": "ac62708tsm",

@@ -65,7 +65,7 @@ export default {
 			"narrative": ""
 		}); 
 		if (Custom1.model?.isNarrow) {
-      showModal(logEntryModelNarrow.name);
+      showModal(logEntryModalNarrow.name);
     } else {
       showModal(logEntryModal.name);
 		}
@@ -111,7 +111,7 @@ export default {
 			"narrative": rowData.narrative || ""
 		}); 
 		if (Custom1.model?.isNarrow) {
-      showModal(logEntryModelNarrow.name);
+      showModal(logEntryModalNarrow.name);
     } else {
       showModal(logEntryModal.name);
 		}
@@ -254,7 +254,7 @@ export default {
 		await storeValue('upsertPayload', this.upsertPayload())
 		await qryUpsertLogEntry.run();
 		await vesselLog.getLogDataFromDB();
-		closeModal('logEntryModal');
+		closeModal(logEntryModal.name);
 	},
 	
 	submitLogUpdateNarrow: async () => {
@@ -262,13 +262,20 @@ export default {
 		await storeValue('upsertPayload', this.upsertPayloadNarrow())
 		await qryUpsertLogEntry.run();
 		await vesselLog.getLogDataFromDB();
-		closeModal('logEntryModal');
+		closeModal(logEntryModalNarrow.name);
 	},
 	
 	submitLogDelete: async () => {
 		await authorization.refreshTokenIfNeeded(); 
 		await qryDeleteLogEntry.run();
 		await vesselLog.getLogDataFromDB();
-		closeModal('logEntryModal');
+
+		if (typeof logEntryModal !== "undefined" && logEntryModal?.isVisible) {
+			closeModal(logEntryModal.name);
+		}
+
+		if (typeof logEntryModalNarrow !== "undefined" && logEntryModalNarrow?.isVisible) {
+			closeModal(logEntryModalNarrow.name);
+		}
 	}
 }
