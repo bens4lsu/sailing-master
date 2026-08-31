@@ -252,6 +252,7 @@ export default {
 	submitLogUpdate: async () => {
 		await authorization.refreshTokenIfNeeded(); 
 		await storeValue('upsertPayload', this.upsertPayload())
+		console.log(this.upsertPayload());
 		await qryUpsertLogEntry.run();
 		await vesselLog.getLogDataFromDB();
 		closeModal(logEntryModal.name);
@@ -267,6 +268,17 @@ export default {
 	
 	submitLogDelete: async () => {
 		await authorization.refreshTokenIfNeeded(); 
+		var deletePayload = {id: null};
+		
+		if (typeof logEntryModal !== "undefined" && logEntryModal?.isVisible) {
+			deletePayload.id = inpId.text;
+		}
+		
+		if (typeof logEntryModalNarrow !== "undefined" && logEntryModalNarrow?.isVisible) {
+			deletePayload.id = inpIdCopy.text;
+		}
+		
+	  await storeValue('deletePayload', deletePayload)
 		await qryDeleteLogEntry.run();
 		await vesselLog.getLogDataFromDB();
 

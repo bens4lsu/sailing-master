@@ -57,7 +57,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"In Irons\",\n    \"code\": \"irons\"\n  },\n  {\n    \"name\": \"Close Hauled\",\n    \"code\": \"close hauled\"\n  },\n\t{\n    \"name\": \"Close Reach\",\n    \"code\": \"chose reach\"\n  },\n\t{\n    \"name\": \"Beam Reach\",\n    \"code\": \"beam reach\"\n  },\n\t{\n    \"name\": \"Broad Reach\",\n    \"code\": \"broad reach\"\n  },\n\t{\n    \"name\": \"Run Downwind\",\n    \"code\": \"run\"\n  }\n\t\n]",
+  "sourceData": "[\n  {\n    \"name\": \"In Irons\",\n    \"code\": \"irons\"\n  },\n  {\n    \"name\": \"Close Hauled\",\n    \"code\": \"close hauled\"\n  },\n\t{\n    \"name\": \"Close Reach\",\n    \"code\": \"close reach\"\n  },\n\t{\n    \"name\": \"Beam Reach\",\n    \"code\": \"beam reach\"\n  },\n\t{\n    \"name\": \"Broad Reach\",\n    \"code\": \"broad reach\"\n  },\n\t{\n    \"name\": \"Run Downwind\",\n    \"code\": \"run\"\n  }\n\t\n]",
   "topRow": 24,
   "type": "SELECT_WIDGET",
   "version": 1,

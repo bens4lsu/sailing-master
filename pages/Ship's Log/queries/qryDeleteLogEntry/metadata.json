@@ -35,7 +35,7 @@
       "queryParameters": [
         {
           "key": "id",
-          "value": "eq.{{inpId.text}}"
+          "value": "eq.{{appsmith.store.deletePayload.id}}"
         }
       ],
       "timeoutInMillisecond": 10000
