@@ -1,12 +1,16 @@
 {
-  "gitSyncId": "6a88991af319bf332018064b_14cb3d16-aecb-413f-a2bc-14f22dba6ae1",
-  "id": "Contacts_contacts.tableInit",
+  "gitSyncId": "6a88991af319bf332018064b_a74c73e8-2211-4064-b6a4-dd790491f435",
+  "id": "Contacts_contacts.handleEditClick",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "rowData"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -22,10 +26,10 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "contacts.tableInit",
-    "name": "tableInit",
+    "fullyQualifiedName": "contacts.handleEditClick",
+    "name": "handleEditClick",
     "pageId": "Contacts",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

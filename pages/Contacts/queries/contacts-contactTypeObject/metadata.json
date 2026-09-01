@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6a88991af319bf332018064b_14cb3d16-aecb-413f-a2bc-14f22dba6ae1",
-  "id": "Contacts_contacts.tableInit",
+  "gitSyncId": "6a88991af319bf332018064b_0080c294-4b2f-40d4-bd99-f700a63933ac",
+  "id": "Contacts_contacts.contactTypeObject",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "contacts.tableInit",
-    "name": "tableInit",
+    "fullyQualifiedName": "contacts.contactTypeObject",
+    "name": "contactTypeObject",
     "pageId": "Contacts",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a88991af319bf332018064b_0ab2aca9-a515-4bc9-9b56-cd7791158776",
+  "id": "Contacts_authorization",
+  "unpublishedCollection": {
+    "name": "authorization",
+    "pageId": "Contacts",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
