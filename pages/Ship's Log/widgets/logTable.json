@@ -1,11 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": true,
-  "animateLoading": true,
+  "allowAddNewRow": false,
+  "animateLoading": "{{ qryVesselLog.isLoading }}",
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 77,
+  "bottomRow": 78,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -339,6 +339,12 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "isVisibleDownload"
+    },
+    {
+      "key": "animateLoading"
     }
   ],
   "dynamicPropertyPathList": [
@@ -449,6 +455,12 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "isVisibleDownload"
+    },
+    {
+      "key": "animateLoading"
     }
   ],
   "dynamicTriggerPathList": [
@@ -464,7 +476,7 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
+  "isVisibleDownload": "{{! Custom1.model?.isNarrow}}",
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
@@ -478,6 +490,8 @@
   "mobileTopRow": 1,
   "needsErrorInfo": false,
   "oddRowColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "originalBottomRow": 80,
+  "originalTopRow": 12,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumnId": "id",
@@ -682,7 +696,7 @@
       "label": "Edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{vesselLogEntryForm.handleEditClick(logTable.triggeredRow)}}",
+      "onClick": "{{vesselLogEntryForm.handleEditClick(currentRow);}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.775rem",
@@ -1922,7 +1936,7 @@
   "searchKey": "",
   "tableData": "{{vesselLog.getFilteredData();}}",
   "textSize": "0.775rem",
-  "topRow": 5,
+  "topRow": 12,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

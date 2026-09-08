@@ -48,9 +48,14 @@
     "contact_type_id",
     "vhf",
     "contact_type",
-    "notes"
+    "notes",
+    "vessel_id",
+    "created_at",
+    "created_by",
+    "updated_at",
+    "updated_by"
   ],
-  "columnUpdatedAt": 1788298572264,
+  "columnUpdatedAt": 1788399625179,
   "columnWidthMap": {
     "customColumn1": 60
   },
@@ -71,9 +76,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "primaryColumns.id.computedValue"
@@ -128,14 +130,45 @@
     },
     {
       "key": "primaryColumns.notes.computedValue"
+    },
+    {
+      "key": "primaryColumns.vessel_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.created_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.created_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.updated_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.updated_by.computedValue"
+    },
+    {
+      "key": "isVisibleDownload"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "isVisibleDownload"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -144,7 +177,7 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
+  "isVisibleDownload": "{{! Custom1.model?.isNarrow}}",
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
@@ -285,6 +318,74 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "created_at": {
+      "alias": "created_at",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblContacts.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"created_at\"])) : created_at })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "created_at",
+      "index": 15,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "created_at",
+      "notation": "standard",
+      "originalId": "created_at",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "created_by": {
+      "alias": "created_by",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblContacts.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"created_by\"])) : created_by })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "created_by",
+      "index": 16,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "created_by",
+      "notation": "standard",
+      "originalId": "created_by",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "customColumn1": {
       "alias": "Ed",
       "allowCellWrapping": false,
@@ -315,6 +416,7 @@
       "label": "Ed",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{contacts.handleEditClick(currentRow);}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -605,6 +707,108 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "updated_at": {
+      "alias": "updated_at",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblContacts.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"updated_at\"])) : updated_at })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "updated_at",
+      "index": 17,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "updated_at",
+      "notation": "standard",
+      "originalId": "updated_at",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "updated_by": {
+      "alias": "updated_by",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblContacts.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"updated_by\"])) : updated_by })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "updated_by",
+      "index": 18,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "updated_by",
+      "notation": "standard",
+      "originalId": "updated_by",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "vessel_id": {
+      "alias": "vessel_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblContacts.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"vessel_id\"])) : vessel_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "vessel_id",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "vessel_id",
+      "notation": "standard",
+      "originalId": "vessel_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "vhf": {
       "alias": "vhf",
       "allowCellWrapping": false,
@@ -672,7 +876,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{contacts.tableInit.data}}",
+  "tableData": "{{contacts.getFilteredData();}}",
   "textSize": "0.875rem",
   "topRow": 15,
   "totalRecordsCount": 0,

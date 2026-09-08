@@ -21,15 +21,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "labelTextSize"
-    },
-    {
-      "key": "onBlur"
     }
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "onBlur"
-    },
     {
       "key": "onTextChanged"
     }
@@ -57,7 +51,7 @@
   "mobileRightColumn": 12.000000000000002,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "onBlur": "{{inpSTW.setValue(vesselLogEntryForm.formatToOneDecimal(inpSTW.text))}}",
+  "onBlur": "",
   "onTextChanged": "",
   "parentColumnSpace": 4.1457763671875,
   "parentId": "abwnn1m2eo",

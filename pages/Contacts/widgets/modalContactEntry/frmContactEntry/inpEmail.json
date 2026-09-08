@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 55,
+  "bottomRow": 28,
   "boxShadow": "none",
-  "defaultText": "{{appsmith.store.formDefaults.id}}",
+  "defaultText": "{{appsmith.store.formDefaults.email}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,50 +17,55 @@
       "key": "defaultText"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "labelTextSize"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": true,
+  "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "ehbks60d6q",
-  "label": "",
+  "key": "73pw5mt6v7",
+  "label": "Email",
   "labelAlignment": "left",
-  "labelPosition": "Top",
+  "labelPosition": "Left",
   "labelStyle": "",
-  "labelTextColor": "#d4d4d8",
-  "labelTextSize": "0.5rem",
-  "labelWidth": 5,
+  "labelTextColor": "#919191",
+  "labelTextSize": "0.675rem",
+  "labelWidth": "9",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 13,
-  "mobileLeftColumn": 33,
-  "mobileRightColumn": 53,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12.000000000000002,
+  "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 55,
-  "originalTopRow": 51,
-  "parentColumnSpace": 11.599218749999999,
+  "onBlur": "",
+  "onTextChanged": "",
+  "parentColumnSpace": 4.1457763671875,
   "parentId": "abwnn1m2eo",
   "parentRowSpace": 10,
+  "regex": "",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
-  "shouldScrollContents": true,
+  "rightColumn": 64,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 51,
+  "topRow": 24,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "prfa2tvrq4",
-  "widgetName": "inpIdCopy"
+  "widgetId": "c6o84ausb9",
+  "widgetName": "inpEmail"
 }

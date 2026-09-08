@@ -27,7 +27,16 @@
           "value": true
         }
       ],
-      "queryParameters": [],
+      "queryParameters": [
+        {
+          "key": "vessel_id",
+          "value": "eq.{{appsmith.store.vessel.id}}"
+        },
+        {
+          "key": "order",
+          "value": "name.asc"
+        }
+      ],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
@@ -40,11 +49,17 @@
     "dynamicBindingPathList": [
       {
         "key": "headers[0].value"
+      },
+      {
+        "key": "path"
+      },
+      {
+        "key": "queryParameters[0].value"
       }
     ],
     "name": "qryContacts",
     "pageId": "Contacts",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

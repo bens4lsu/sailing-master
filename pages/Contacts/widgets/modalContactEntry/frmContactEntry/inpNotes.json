@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 45,
   "boxShadow": "none",
-  "defaultText": "{{appsmith.store.formDefaults.email}}",
+  "defaultText": "{{appsmith.store.formDefaults.notes\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,64 +14,51 @@
       "key": "borderRadius"
     },
     {
+      "key": "labelTextColor"
+    },
+    {
       "key": "defaultText"
     }
   ],
-  "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "labelTextSize"
-    },
-    {
-      "key": "onBlur"
-    }
-  ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onBlur"
-    },
-    {
-      "key": "onTextChanged"
-    }
-  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "MULTI_LINE_TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "73pw5mt6v7",
-  "label": "Email",
+  "key": "ehbks60d6q",
+  "label": "Notes",
   "labelAlignment": "left",
-  "labelPosition": "Left",
-  "labelStyle": "",
-  "labelTextColor": "#919191",
-  "labelTextSize": "0.675rem",
-  "labelWidth": "9",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 15,
+  "mobileBottomRow": 102,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 12.000000000000002,
-  "mobileTopRow": 8,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 95,
   "needsErrorInfo": false,
-  "onBlur": "{{inpSTW.setValue(vesselLogEntryForm.formatToOneDecimal(inpSTW.text))}}",
-  "onTextChanged": "",
-  "parentColumnSpace": 4.1457763671875,
+  "originalBottomRow": 45,
+  "originalTopRow": 35,
+  "parentColumnSpace": 11.599218749999999,
   "parentId": "abwnn1m2eo",
   "parentRowSpace": 10,
-  "regex": "^\\d+(?:\\.\\d)?$",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 24,
+  "topRow": 35,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "c6o84ausb9",
-  "widgetName": "in_email"
+  "widgetId": "8me4nwg7ns",
+  "widgetName": "inpNotes"
 }

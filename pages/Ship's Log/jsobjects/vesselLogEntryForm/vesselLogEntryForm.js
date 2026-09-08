@@ -143,9 +143,9 @@ export default {
 		return `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}:${p.second} ${formattedOffset}`;
 	},
 	
-	upsertPayload: () => {
+	upsertPayload: async () => {
 	  const dt = this.getDeviceFormattedDate();
-		const user = appsmith.store.userData.name;
+		const user = await appsmith.store.userData.name;
 		const payload = {
 			"id": inpId.text,
 			"vessel_id": appsmith.store.vessel.id,
@@ -192,9 +192,9 @@ export default {
 		return payload;
 	},
 	
-	upsertPayloadNarrow: () => {
+	upsertPayloadNarrow: async () => {
 	  const dt = this.getDeviceFormattedDate();
-		const user = appsmith.store.userData.name;
+		const user = await appsmith.store.userData.name;
 		const payload = {
 			"id": inpIdCopy.text,
 			"vessel_id": appsmith.store.vessel.id,
@@ -252,7 +252,6 @@ export default {
 	submitLogUpdate: async () => {
 		await authorization.refreshTokenIfNeeded(); 
 		await storeValue('upsertPayload', this.upsertPayload())
-		console.log(this.upsertPayload());
 		await qryUpsertLogEntry.run();
 		await vesselLog.getLogDataFromDB();
 		closeModal(logEntryModal.name);
