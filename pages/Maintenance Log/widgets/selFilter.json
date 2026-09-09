@@ -67,7 +67,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 40,
   "serverSideFiltering": false,
-  "sourceData": "{{appsmith.store.filterComponents}}",
+  "sourceData": "{{appsmith.store.filter}}",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,

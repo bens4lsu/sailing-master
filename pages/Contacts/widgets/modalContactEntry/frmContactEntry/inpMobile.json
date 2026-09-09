@@ -56,6 +56,7 @@
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 64,
+  "tabOrder": 9,
   "topRow": 20,
   "type": "PHONE_INPUT_WIDGET",
   "version": 1,

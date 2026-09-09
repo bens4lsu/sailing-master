@@ -55,6 +55,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 25,
   "showStepArrows": false,
+  "tabOrder": 11,
   "topRow": 28,
   "type": "INPUT_WIDGET_V2",
   "version": 2,

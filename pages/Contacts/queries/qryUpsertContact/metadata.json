@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{contacts.upsertPayload();}}",
+      "body": "{{contactsForm.upsertPayload();}}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

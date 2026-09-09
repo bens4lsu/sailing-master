@@ -1,34 +1,4 @@
 export default {
-	tableInit: async () => {
-		await authorization.refreshTokenIfNeeded();
-
-		const components = await qryComponents.run();
-		const filterComponents = [{ name: "", value: "" }, ...components];
-		await storeValue("filter", components);
-		
-		const contacts = await qryContacts.run();
-		await storeValue("maintContacts");
-		
-		return await qryMaintenance.run();
-
-	},
-	
-	getFilteredData: () => {
-    const filter = appsmith.store.componentFilter || "all";
-    const maintData = qryMaintenance.data || [];
-		const filterValue = appsmith.store.componentFilter;
-    let filteredData = [];
-
-    if (!filter || filter === "" || filter === "all") {
-      filteredData = qryMaintenance.data;
-    } else  {
-      filteredData = qryMaintenance.data.filter(e => 
-        (e.component_name === filterValue)
-      );
-    }
-		return filteredData;
-  },
-/*
 	nullIfBlank(str) {
 		if (typeof str === "string") {
 			return str.trim() === "" ? null : str;
@@ -104,8 +74,8 @@ export default {
 	async submitContact() {
 		await authorization.refreshTokenIfNeeded();
 		await qryUpsertContact.run();
-		await qryMaintenance.run();
+		await qryContacts.run();
 		closeModal(modalContactEntry.name);
-	}
-	*/
+	},
+	
 }

@@ -36,7 +36,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{contacts.submitContact()}}",
+  "onClick": "{{contactsForm.submitContact()}}",
   "originalBottomRow": 50,
   "originalTopRow": 46,
   "parentId": "abwnn1m2eo",
@@ -46,10 +46,11 @@
   "resetFormOnClick": true,
   "responsiveBehavior": "hug",
   "rightColumn": 64,
+  "tabOrder": 16,
   "text": "Submit",
   "topRow": 46,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "he2io76qus",
-  "widgetName": "btnSubmitCopy"
+  "widgetName": "btnSubmit"
 }

@@ -61,6 +61,7 @@
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{appsmith.store.contactTypes}}",
+  "tabOrder": 2,
   "topRow": 4,
   "type": "SELECT_WIDGET",
   "version": 1,

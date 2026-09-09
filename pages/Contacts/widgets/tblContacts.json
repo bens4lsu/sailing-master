@@ -1,7 +1,7 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "allowAddNewRow": false,
-  "animateLoading": true,
+  "animateLoading": "{{qryContacts.isLoading}}",
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
@@ -151,6 +151,9 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "animateLoading"
     }
   ],
   "dynamicPropertyPathList": [
@@ -162,6 +165,9 @@
     },
     {
       "key": "isVisibleDownload"
+    },
+    {
+      "key": "animateLoading"
     }
   ],
   "dynamicTriggerPathList": [
@@ -416,7 +422,7 @@
       "label": "Ed",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{contacts.handleEditClick(currentRow);}}",
+      "onClick": "{{contactsForm.handleEditClick(currentRow)}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -876,7 +882,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{contacts.getFilteredData();}}",
+  "tableData": "{{contacts.getFilteredData()}}",
   "textSize": "0.875rem",
   "topRow": 15,
   "totalRecordsCount": 0,

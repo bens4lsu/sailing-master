@@ -46,6 +46,14 @@
       "isDefault": false
     },
     {
+      "id": "Parts Inventory",
+      "isDefault": false
+    },
+    {
+      "id": "Documents",
+      "isDefault": false
+    },
+    {
       "id": "Real Time Tracking",
       "isDefault": false
     }

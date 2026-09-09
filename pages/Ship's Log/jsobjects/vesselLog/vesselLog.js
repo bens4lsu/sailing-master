@@ -20,6 +20,11 @@ export default {
   },
 
   getFilteredData() {
+		// If the query is actively loading or has no data yet, return an empty list immediately
+		if (qryVesselLog.isLoading || !qryVesselLog.data) {
+			return [];
+		}
+		
     const filter = appsmith.store.tableFilter || "all";
     const raw = qryVesselLog.data;
     const logData = Array.isArray(raw) ? raw : (Array.isArray(raw?.data) ? raw.data : []);

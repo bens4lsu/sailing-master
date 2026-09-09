@@ -31,7 +31,7 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "onClick": "{{contacts.handleNewClick();}}",
+  "onClick": "{{contactsForm.handleNewClick();}}",
   "parentColumnSpace": 17.640625,
   "parentId": "0",
   "parentRowSpace": 10,

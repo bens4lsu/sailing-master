@@ -63,6 +63,7 @@
   "rightColumn": 64,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
+  "tabOrder": 3,
   "topRow": 8,
   "type": "INPUT_WIDGET_V2",
   "version": 2,

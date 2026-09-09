@@ -29,16 +29,20 @@
       ],
       "queryParameters": [
         {
+          "key": "select",
+          "value": "id,name,contact_types!inner()"
+        },
+        {
           "key": "vessel_id",
           "value": "eq.{{appsmith.store.vessel.id}}"
         },
         {
-          "key": "order",
-          "value": "name.asc"
+          "key": "contact_types.is_maintenance_vendor",
+          "value": "eq.true"
         },
         {
-          "key": "select",
-          "value": "id,name"
+          "key": "order",
+          "value": "name.asc"
         }
       ],
       "timeoutInMillisecond": 10000
@@ -58,7 +62,7 @@
         "key": "path"
       },
       {
-        "key": "queryParameters[0].value"
+        "key": "queryParameters[1].value"
       }
     ],
     "name": "qryContacts",

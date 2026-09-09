@@ -59,6 +59,7 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
@@ -83,6 +84,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldScrollContents": true,
+  "tabOrder": 1,
   "topRow": 0,
   "type": "FORM_WIDGET",
   "widgetId": "522v3vbstu",
