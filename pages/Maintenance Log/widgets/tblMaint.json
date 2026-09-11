@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 51,
+  "bottomRow": 62,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -36,12 +36,15 @@
     "id",
     "name",
     "date",
-    "description",
     "contact_name",
-    "component_name"
+    "component_name",
+    "notes",
+    "contact_id",
+    "component_id_list"
   ],
-  "columnUpdatedAt": 1788979192703,
+  "columnUpdatedAt": 1788988395121,
   "columnWidthMap": {
+    "component_name": 227,
     "name": 290
   },
   "customIsLoading": false,
@@ -75,9 +78,6 @@
       "key": "primaryColumns.date.computedValue"
     },
     {
-      "key": "primaryColumns.description.computedValue"
-    },
-    {
       "key": "primaryColumns.contact_name.computedValue"
     },
     {
@@ -87,9 +87,6 @@
       "key": "animateLoading"
     },
     {
-      "key": "primaryColumns.contact_name.selectOptions"
-    },
-    {
       "key": "primaryColumns.customColumn1.buttonColor"
     },
     {
@@ -97,6 +94,15 @@
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.notes.computedValue"
+    },
+    {
+      "key": "primaryColumns.contact_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.component_id_list.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -105,9 +111,16 @@
     },
     {
       "key": "animateLoading"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -133,12 +146,46 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "component_id_list": {
+      "alias": "component_id_list",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"component_id_list\"])) : component_id_list })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "component_id_list",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "component_id_list",
+      "notation": "standard",
+      "originalId": "component_id_list",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "component_name": {
       "alias": "component_name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.component_name)) : currentRow.component_name })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -164,12 +211,47 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "contact_id": {
+      "alias": "contact_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"contact_id\"])) : contact_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "contact_id",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "contact_id",
+      "notation": "standard",
+      "originalId": "contact_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "contact_name": {
       "alias": "contact_name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "select",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.contact_name)) : currentRow.contact_name })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -188,9 +270,10 @@
       "label": "contact_name",
       "notation": "standard",
       "originalId": "contact_name",
-      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (appsmith.store.maintContacts)) : appsmith.store.maintContacts })()}}",
+      "selectOptions": "",
       "sortBy": "label",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -201,9 +284,9 @@
       "alias": "edit",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "borderRadius": "{{tblMaint.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{tblMaint.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{tblMaint.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
       "computedValue": "",
@@ -227,6 +310,7 @@
       "label": "edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{maintenanceForm.handleEditClick(currentRow);}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -240,7 +324,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "date",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date\"])) : date })()}}",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date\"])) : date })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -248,6 +332,7 @@
       "horizontalAlignment": "LEFT",
       "id": "date",
       "index": 2,
+      "inputFormat": "YYYY-MM-DD",
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -259,37 +344,7 @@
       "label": "date",
       "notation": "standard",
       "originalId": "date",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "description": {
-      "alias": "description",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"description\"])) : description })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "description",
-      "index": 3,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "description",
-      "notation": "standard",
-      "originalId": "description",
+      "outputFormat": "YYYY-MM-DD",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -302,7 +357,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -333,7 +388,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"name\"])) : name })()}}",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"name\"])) : name })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -358,6 +413,40 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
+    },
+    "notes": {
+      "alias": "notes",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"notes\"])) : notes })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "notes",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "notes",
+      "notation": "standard",
+      "originalId": "notes",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
@@ -366,11 +455,11 @@
   "searchKey": "",
   "tableData": "{{maintenance.getFilteredData()}}",
   "textSize": "0.875rem",
-  "topRow": 23,
+  "topRow": 14,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
   "widgetId": "5iy07skq98",
-  "widgetName": "Table1"
+  "widgetName": "tblMaint"
 }

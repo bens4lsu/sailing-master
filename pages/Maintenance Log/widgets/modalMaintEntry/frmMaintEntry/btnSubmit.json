@@ -1,11 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 36,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
-  "disabledWhenInvalid": false,
+  "disabledWhenInvalid": true,
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
@@ -14,11 +14,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -28,28 +24,29 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "19bij8cs6r",
-  "leftColumn": 48,
+  "key": "0e563icmh6",
+  "leftColumn": 51,
   "minWidth": 120,
-  "mobileBottomRow": 14,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 17,
-  "mobileTopRow": 10,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{maintenanceForm.handleNewClick();}}",
-  "parentColumnSpace": 17.640625,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "onClick": "{{maintenanceForm.submitMaint();}}",
+  "originalBottomRow": 36,
+  "originalTopRow": 32,
+  "parentId": "warlq9eisi",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
-  "resetFormOnClick": false,
+  "resetFormOnClick": true,
   "responsiveBehavior": "hug",
   "rightColumn": 64,
-  "text": "New",
-  "topRow": 8,
+  "tabOrder": 16,
+  "text": "Submit",
+  "topRow": 32,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "xxka8nfuso",
-  "widgetName": "Button1"
+  "widgetId": "73g5z2mjor",
+  "widgetName": "btnSubmit"
 }
