@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a88991af319bf332018064b_9787e9bf-cd90-4ff5-be36-51e32be76391",
+  "id": "Parts Inventory_inventory",
+  "unpublishedCollection": {
+    "name": "inventory",
+    "pageId": "Parts Inventory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
