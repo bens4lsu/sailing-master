@@ -58,6 +58,16 @@ export default {
 		await qryInsertEntryComponents.run();
 		await qryMaintenance.run();
 		closeModal(modalMaintEntry.name);
+	},
+	
+	async submitDelete() {
+		await authorization.refreshTokenIfNeeded();
+		await storeValue('deletePayload', {id: inpId.text});
+		await qryDeleteEntryComponents.run();
+		await qryDeleteMaint.run();
+		await qryMaintenance.run();
+		maintenance.getFilteredData();
+		closeModal(modalMaintEntry.name);
 	}
 	
 }

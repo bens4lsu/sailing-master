@@ -23,9 +23,6 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
-    },
-    {
-      "key": "onOptionChange"
     }
   ],
   "dynamicTriggerPathList": [
@@ -54,7 +51,7 @@
   "mobileRightColumn": 10,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onOptionChange": "{{storeValue(\"maintFilter\", selFilter.selectedOptionLabel);}}",
+  "onOptionChange": "{{maintenance.getFilteredData();}}",
   "optionLabel": "name",
   "optionValue": "id",
   "originalBottomRow": 11,
@@ -67,7 +64,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 40,
   "serverSideFiltering": false,
-  "sourceData": "{{appsmith.store.filter}}",
+  "sourceData": "{{appsmith.store.componentList}}",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,

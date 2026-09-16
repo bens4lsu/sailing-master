@@ -78,4 +78,12 @@ export default {
 		closeModal(modalContactEntry.name);
 	},
 	
+	async submitDelete() {
+		await authorization.refreshTokenIfNeeded(); 
+	  await storeValue('deletePayload', {id: inpId.text});
+		await qryDeleteContact.run();
+		await contacts.getContactDataFromDB();
+		closeModal(modalContactEntry.name);
+	}
+	
 }

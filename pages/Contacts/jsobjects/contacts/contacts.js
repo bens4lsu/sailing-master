@@ -6,7 +6,7 @@ export default {
     types = (types || []).sort((a, b) => (a?.name || "").localeCompare(b?.name || ""));
 
     const filterValues = types.map(e => ({ name: e.name, value: e.id }));
-    const contactTypes = [{ name: "", value: "" }, ...filterValues];
+    const contactTypes = [{ name: "All", value: "" }, ...filterValues];
     await storeValue("contactTypes", contactTypes);
 
     return await this.getContactDataFromDB();

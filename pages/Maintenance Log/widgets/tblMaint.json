@@ -40,9 +40,10 @@
     "component_name",
     "notes",
     "contact_id",
-    "component_id_list"
+    "component_id_list",
+    "component_id"
   ],
-  "columnUpdatedAt": 1788988395121,
+  "columnUpdatedAt": 1789574910428,
   "columnWidthMap": {
     "component_name": 227,
     "name": 290
@@ -103,6 +104,9 @@
     },
     {
       "key": "primaryColumns.component_id_list.computedValue"
+    },
+    {
+      "key": "primaryColumns.component_id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -146,6 +150,40 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "component_id": {
+      "alias": "component_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tblMaint.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"component_id\"])) : component_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "component_id",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "component_id",
+      "notation": "standard",
+      "originalId": "component_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "component_id_list": {
       "alias": "component_id_list",
       "allowCellWrapping": false,
