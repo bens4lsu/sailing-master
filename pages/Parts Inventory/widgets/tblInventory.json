@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 38,
+  "bottomRow": 42,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -41,10 +41,11 @@
     "details",
     "customColumn3"
   ],
-  "columnUpdatedAt": 1789500963008,
+  "columnUpdatedAt": 1789583362243,
   "columnWidthMap": {
     "customColumn1": 65,
     "customColumn2": 60,
+    "customColumn3": 68.9375,
     "details": 660,
     "part": 166
   },
@@ -111,6 +112,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn3.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -127,7 +131,7 @@
   "isVisibleSearch": true,
   "key": "qrgcb3h5k7",
   "label": "Data",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 38,
   "mobileLeftColumn": 0,
@@ -240,6 +244,7 @@
       "label": "ed",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{inventoryForm.handleEditClick(currentRow);}}",
       "originalId": "customColumn3",
       "sticky": "",
       "textSize": "0.875rem",
@@ -270,7 +275,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "details",
       "notation": "standard",
       "originalId": "details",
@@ -421,7 +426,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{qryInventory.data}}",

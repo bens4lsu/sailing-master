@@ -3,13 +3,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 41,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "",
+  "defaultText": "{{appsmith.store.formDefaults.details}}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -24,7 +27,7 @@
   "key": "kb1p9jk62k",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "",
+  "labelText": "Notes/Links",
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,

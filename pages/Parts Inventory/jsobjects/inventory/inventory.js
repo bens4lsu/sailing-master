@@ -13,17 +13,15 @@ export default {
 		await qryInventory.run();
 	},
 	
-	handleNewPart: async () => {
-		authorization.refreshTokenIfNeeded();
-		const payload = {
-			vessel_id: appsmith.store.vessel.id,
-			part: inpPartName.text
-		}
-		await storeValue("inventoryPayload", payload);
-		await qryUpsertPart.run();
-		await qryInventory.run();
-		closeModal(modNew.name);
-	}
 	
-	
+	handleNewClick: async () => {
+		await storeValue('formDefaults', {
+			id: crypto.randomUUID(),
+			part: "",
+			quantity: "",
+			details: "",
+		});
+		showModal(modInvEdit.name);
+	},
+		
 }

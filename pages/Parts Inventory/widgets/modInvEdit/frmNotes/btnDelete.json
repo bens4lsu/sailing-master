@@ -1,16 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 48,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonColor": "#b91c1c",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -24,26 +20,30 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "prrzn70b80",
-  "leftColumn": 47,
+  "key": "t7w9efks4z",
+  "leftColumn": 2,
   "minWidth": 120,
-  "mobileBottomRow": 22,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 18,
+  "mobileBottomRow": 109,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 105,
   "needsErrorInfo": false,
-  "onClick": "{{inventory.handleNewPart();}}",
-  "parentId": "9qlhdch7yi",
+  "onClick": "{{inventoryForm.submitDelete();}}",
+  "originalBottomRow": 109,
+  "originalTopRow": 105,
+  "parentColumnSpace": 10.110253906249998,
+  "parentId": "26yisssxzw",
+  "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "text": "Confirm",
-  "topRow": 8,
+  "rightColumn": 18,
+  "text": "Delete",
+  "topRow": 44,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "e1m4buckn5",
-  "widgetName": "btnAddNew"
+  "widgetId": "smfzz7ncaq",
+  "widgetName": "btnDelete"
 }

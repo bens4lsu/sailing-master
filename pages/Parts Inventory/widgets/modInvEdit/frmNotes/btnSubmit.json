@@ -3,10 +3,13 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 48,
   "boxShadow": "none",
-  "buttonColor": "#b91c1c",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
-  "disabledWhenInvalid": false,
+  "disabledWhenInvalid": true,
   "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
     {
       "key": "borderRadius"
     }
@@ -20,30 +23,26 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "t7w9efks4z",
-  "leftColumn": 2,
+  "key": "kw4xghcqjh",
+  "leftColumn": 48,
   "minWidth": 120,
-  "mobileBottomRow": 109,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 9,
-  "mobileTopRow": 105,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{vesselLogEntryForm.submitLogDelete();}}",
-  "originalBottomRow": 109,
-  "originalTopRow": 105,
-  "parentColumnSpace": 10.110253906249998,
+  "onClick": "{{inventoryForm.submitInvItem();}}",
   "parentId": "26yisssxzw",
-  "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
-  "resetFormOnClick": false,
+  "resetFormOnClick": true,
   "responsiveBehavior": "hug",
-  "rightColumn": 18,
-  "text": "Delete",
+  "rightColumn": 64,
+  "text": "Submit",
   "topRow": 44,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "smfzz7ncaq",
-  "widgetName": "btnDelete"
+  "widgetId": "ycp8njpxdd",
+  "widgetName": "btnSubmit"
 }

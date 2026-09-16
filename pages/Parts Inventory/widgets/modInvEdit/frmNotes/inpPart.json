@@ -5,38 +5,41 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 8,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{appsmith.store.formDefaults.part}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "NUMBER",
+  "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "5ijpxcst8r",
-  "label": "Quantity",
+  "key": "43i6mx3i0i",
+  "label": "Part",
   "labelAlignment": "left",
-  "labelPosition": "Left",
+  "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
-  "labelWidth": "13",
+  "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 13,
+  "mobileBottomRow": 7,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 21,
-  "mobileTopRow": 6,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
   "parentColumnSpace": 6.5166015625,
   "parentId": "26yisssxzw",
@@ -44,12 +47,11 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 25,
-  "shouldAllowAutofill": false,
+  "rightColumn": 48,
   "showStepArrows": false,
-  "topRow": 4,
+  "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "axs7rr4pzj",
-  "widgetName": "Input1"
+  "widgetId": "hiz2p8rt7j",
+  "widgetName": "inpPart"
 }

@@ -8,7 +8,6 @@ export default {
 	},
 
 	handleEditClick: async (rowData) => {
-		console.log(rowData);
 		await storeValue('formDefaults', {
 			id: rowData?.id || "ERROR",
 			name: rowData?.name || "",
@@ -75,7 +74,7 @@ export default {
 		await authorization.refreshTokenIfNeeded();
 		await qryUpsertContact.run();
 		await qryContacts.run();
-		closeModal(modalContactEntry.name);
+		this.myCloseModal();
 	},
 	
 	async submitDelete() {
@@ -83,7 +82,13 @@ export default {
 	  await storeValue('deletePayload', {id: inpId.text});
 		await qryDeleteContact.run();
 		await contacts.getContactDataFromDB();
+		this.myCloseModal();
+	},
+	
+	async myCloseModal() {
+		await new Promise(resolve => setTimeout(resolve, 100)); 
 		closeModal(modalContactEntry.name);
 	}
+	
 	
 }
