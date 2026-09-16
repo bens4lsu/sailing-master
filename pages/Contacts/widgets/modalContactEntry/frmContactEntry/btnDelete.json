@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 175,
+  "bottomRow": 50,
   "boxShadow": "none",
   "buttonColor": "#b91c1c",
   "buttonVariant": "PRIMARY",
@@ -33,11 +33,11 @@
   "mobileRightColumn": 9,
   "mobileTopRow": 105,
   "needsErrorInfo": false,
-  "onClick": "{{vesselLogEntryForm.submitLogDelete('narrow');}}",
-  "originalBottomRow": 175,
-  "originalTopRow": 171,
+  "onClick": "{{contactsForm.submitDelete();}}",
+  "originalBottomRow": 109,
+  "originalTopRow": 105,
   "parentColumnSpace": 10.110253906249998,
-  "parentId": "ac62708tsm",
+  "parentId": "abwnn1m2eo",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -46,9 +46,9 @@
   "responsiveBehavior": "hug",
   "rightColumn": 13,
   "text": "Delete",
-  "topRow": 171,
+  "topRow": 46,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "2pk97y9orm",
-  "widgetName": "btnDeleteCopy"
+  "widgetId": "u5wme58yju",
+  "widgetName": "btnDelete"
 }

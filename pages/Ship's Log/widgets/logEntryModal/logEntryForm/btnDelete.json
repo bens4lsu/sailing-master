@@ -11,6 +11,11 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -28,7 +33,7 @@
   "mobileRightColumn": 9,
   "mobileTopRow": 105,
   "needsErrorInfo": false,
-  "onClick": "{{vesselLogEntryForm.submitLogDelete();}}",
+  "onClick": "{{vesselLogEntryForm.submitLogDelete('wide');}}",
   "originalBottomRow": 109,
   "originalTopRow": 105,
   "parentColumnSpace": 10.110253906249998,

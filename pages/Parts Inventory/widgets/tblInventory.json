@@ -38,12 +38,14 @@
     "quantity",
     "customColumn1",
     "customColumn2",
-    "details"
+    "details",
+    "customColumn3"
   ],
-  "columnUpdatedAt": 1789159523128,
+  "columnUpdatedAt": 1789500963008,
   "columnWidthMap": {
     "customColumn1": 65,
     "customColumn2": 60,
+    "details": 660,
     "part": 166
   },
   "customIsLoading": false,
@@ -81,6 +83,15 @@
     },
     {
       "key": "primaryColumns.details.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn3.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn3.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn3.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -192,6 +203,44 @@
       "notation": "standard",
       "onClick": "{{inventory.handleChangeQuantity(currentRow, -1);}}",
       "originalId": "customColumn2",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn3": {
+      "alias": "ed",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{tblInventory.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{tblInventory.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{tblInventory.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "edit",
+      "id": "customColumn3",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "ed",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "originalId": "customColumn3",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -374,6 +423,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
   "tableData": "{{qryInventory.data}}",
   "textSize": "0.875rem",
   "topRow": 14,

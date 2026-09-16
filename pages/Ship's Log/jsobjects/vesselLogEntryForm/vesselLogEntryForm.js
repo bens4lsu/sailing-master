@@ -265,15 +265,15 @@ export default {
 		closeModal(logEntryModalNarrow.name);
 	},
 	
-	submitLogDelete: async () => {
+	submitLogDelete: async (modalType) => {
 		await authorization.refreshTokenIfNeeded(); 
 		var deletePayload = {id: null};
 		
-		if (typeof logEntryModal !== "undefined" && logEntryModal?.isVisible) {
+		if (typeof logEntryModal !== "undefined" && modalType === 'wide') {
 			deletePayload.id = inpId.text;
 		}
 		
-		if (typeof logEntryModalNarrow !== "undefined" && logEntryModalNarrow?.isVisible) {
+		if (typeof logEntryModalNarrow !== "undefined" && modalType === 'narrow') {
 			deletePayload.id = inpIdCopy.text;
 		}
 		
@@ -281,11 +281,11 @@ export default {
 		await qryDeleteLogEntry.run();
 		await vesselLog.getLogDataFromDB();
 
-		if (typeof logEntryModal !== "undefined" && logEntryModal?.isVisible) {
+		if (typeof logEntryModal !== "undefined" && modalType === 'wide') {
 			closeModal(logEntryModal.name);
 		}
 
-		if (typeof logEntryModalNarrow !== "undefined" && logEntryModalNarrow?.isVisible) {
+		if (typeof logEntryModalNarrow !== "undefined" && modalType === 'narrow') {
 			closeModal(logEntryModalNarrow.name);
 		}
 	}
