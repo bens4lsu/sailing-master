@@ -21,13 +21,18 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/2.0/workspace/950277931384472/rest/ShipsLogDB/public/maintenance_vw\n",
+      "path": "/api/2.0/workspace/950277931384472/rest/ShipsLogDB/public/maintenance_vw",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
       ],
-      "queryParameters": [],
+      "queryParameters": [
+        {
+          "key": "order",
+          "value": "date.desc"
+        }
+      ],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,

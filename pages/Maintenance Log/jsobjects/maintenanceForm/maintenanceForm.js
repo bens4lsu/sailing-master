@@ -53,11 +53,12 @@ export default {
 
 	submitMaint: async () => {
 		await authorization.refreshTokenIfNeeded();
+		await storeValue('deletePayload', {id: inpId.text});
 		await qryUpsertEntry.run();
 		await qryDeleteEntryComponents.run();
 		await qryInsertEntryComponents.run();
 		await qryMaintenance.run();
-		closeModal(modalMaintEntry.name);
+		this.myCloseModal();
 	},
 	
 	async submitDelete() {
@@ -67,7 +68,12 @@ export default {
 		await qryDeleteMaint.run();
 		await qryMaintenance.run();
 		maintenance.getFilteredData();
-		closeModal(modalMaintEntry.name);
+		this.myCloseModal();
+	},
+	
+	async myCloseModal() {
+		await new Promise(resolve => setTimeout(resolve, 100)); 
+		closeModal(modalMaintEntry.name)
 	}
 	
 }
