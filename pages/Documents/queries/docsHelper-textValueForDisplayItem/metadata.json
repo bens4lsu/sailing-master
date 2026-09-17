@@ -1,12 +1,16 @@
 {
-  "gitSyncId": "6a88991af319bf332018064b_dc9ed81c-35cc-4b21-b8e3-4bcb24ce57cb",
-  "id": "Documents_docsHelper.formatDocsHtml",
+  "gitSyncId": "6a88991af319bf332018064b_2628c632-8f2d-4546-ae73-5db7a3de6301",
+  "id": "Documents_docsHelper.textValueForDisplayItem",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "item"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -22,10 +26,10 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "docsHelper.formatDocsHtml",
-    "name": "formatDocsHtml",
+    "fullyQualifiedName": "docsHelper.textValueForDisplayItem",
+    "name": "textValueForDisplayItem",
     "pageId": "Documents",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

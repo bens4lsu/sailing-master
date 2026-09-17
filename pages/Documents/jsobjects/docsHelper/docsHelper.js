@@ -1,19 +1,32 @@
 export default {
-  formatDocsHtml: async () => {
+	
+	getDisplayItems: async () => {
 		await authorization.refreshTokenIfNeeded();
 		await qryDocuments.run();
-		
-		if (!qryDocuments.data) return '';
+		if (!qryDocuments.data) return [];
+		const items = [];
 
-		const body = qryDocuments.data
+		qryDocuments.data
 			.sort((a, b) => a.order_num - b.order_num)
-			.map(cat => `
-				<h3>${cat.description}</h3>
-				<ul>
-					${cat.json_agg.map(d => `<li><a href="${d.url}" target="_blank">${d.title}</a></li>`).join('')}
-				</ul>
-			`).join('');
-
-		await storeValue('docHtml', `<!DOCTYPE html><html><body style="font-family:sans-serif;padding:10px;">${body}</body></html>`);
+			.forEach(cat => {
+				// Insert header item
+				items.push({ isHeader: true, title: cat.description, id: `h_${cat.order_num}` });
+				// Insert child document items
+				cat.json_agg.forEach(doc => {
+					items.push({ isHeader: false, ...doc });
+				});
+			});
+	  await storeValue("documents", items);
+		return items;
+	},
+	
+	textValueForDisplayItem: (item) => {
+		if (item.isHeader) {
+			return item.title;
+		}
+		else {
+			return `      <a href="${item.url}">${item.title}</a>`;
+		}
 	}
+  
 }

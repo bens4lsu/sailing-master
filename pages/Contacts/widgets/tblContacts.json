@@ -184,7 +184,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": "{{! Custom1.model?.isNarrow}}",
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "gohdp11v8f",
