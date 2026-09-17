@@ -59,7 +59,7 @@
     ],
     "name": "qryDocuments",
     "pageId": "Documents",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }
