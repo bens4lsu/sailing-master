@@ -55,7 +55,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "tabOrder": 8,
   "topRow": 16,
   "type": "PHONE_INPUT_WIDGET",

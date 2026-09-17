@@ -53,7 +53,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 25,
+  "rightColumn": 24,
   "showStepArrows": false,
   "tabOrder": 11,
   "topRow": 28,

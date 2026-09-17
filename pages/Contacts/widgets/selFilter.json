@@ -65,7 +65,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 40,
+  "rightColumn": 30,
   "serverSideFiltering": false,
   "sourceData": "{{appsmith.store.contactTypes}}",
   "topRow": 7,

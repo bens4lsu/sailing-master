@@ -38,15 +38,15 @@
     "quantity",
     "customColumn1",
     "customColumn2",
-    "details",
-    "customColumn3"
+    "customColumn3",
+    "details"
   ],
-  "columnUpdatedAt": 1789583362243,
+  "columnUpdatedAt": 1789589154638,
   "columnWidthMap": {
     "customColumn1": 65,
     "customColumn2": 60,
     "customColumn3": 68.9375,
-    "details": 660,
+    "details": 177,
     "part": 166
   },
   "customIsLoading": false,
@@ -259,7 +259,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = tblInventory.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"details\"])) : details })()}}",
+      "computedValue": "{{(() => { const tableData = tblInventory.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ((currentRow[\"details\"])) : (currentRow[\"details\"] })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -275,7 +275,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "details",
       "notation": "standard",
       "originalId": "details",

@@ -58,7 +58,7 @@
   "placeholderText": " ",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "serverSideFiltering": false,
   "sourceData": "{{appsmith.store.contactTypes}}",
   "tabOrder": 2,

@@ -60,7 +60,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "tabOrder": 3,
