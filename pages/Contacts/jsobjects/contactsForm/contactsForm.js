@@ -12,7 +12,7 @@ export default {
 			id: rowData?.id || "ERROR",
 			name: rowData?.name || "",
 			type: rowData?.contact_type || "",
-			address: rowData?.address || "sdaffs",
+			address: rowData?.address || "",
 			city: rowData?.city || "",
 			state: rowData?.state || "",
 			zip: rowData?.zip || "",
@@ -72,8 +72,9 @@ export default {
 
 	async submitContact() {
 		await authorization.refreshTokenIfNeeded();
-		await qryUpsertContact.run();
-		await qryContacts.run();
+		const payload = this.upsertPayload();
+		await qryUpsertContact.run({ payload: payload });
+		await contacts.getContactDataFromDB();
 		this.myCloseModal();
 	},
 	

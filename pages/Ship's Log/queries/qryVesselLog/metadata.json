@@ -59,7 +59,7 @@
     ],
     "name": "qryVesselLog",
     "pageId": "Ship's Log",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

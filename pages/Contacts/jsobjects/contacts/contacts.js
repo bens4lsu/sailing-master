@@ -1,4 +1,6 @@
 export default {
+	contactData: [],
+	
   async tableInit() {
     await authorization.refreshTokenIfNeeded();
 

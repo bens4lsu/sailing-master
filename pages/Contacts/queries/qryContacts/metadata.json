@@ -59,7 +59,7 @@
     ],
     "name": "qryContacts",
     "pageId": "Contacts",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

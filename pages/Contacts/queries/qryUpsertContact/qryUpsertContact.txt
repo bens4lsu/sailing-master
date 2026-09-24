@@ -1,1 +1,1 @@
-{{contactsForm.upsertPayload();}}
+{{this.params.payload}}
