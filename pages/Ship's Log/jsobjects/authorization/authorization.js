@@ -1,30 +1,37 @@
 export default {
-  refreshTokenIfNeeded: async () => {
+  refreshPromise: null,
+
+  refreshTokenIfNeeded: async function () {
+    // If a refresh is already running, wait for it
+    if (this.refreshPromise) {
+      return await this.refreshPromise;
+    }
+
     const token = appsmith.store.bearerToken;
     const tokenTime = appsmith.store.bearerTokenTime;
-
-    // Convert stored tokenTime string into a millisecond timestamp
     const tokenTimestamp = tokenTime ? new Date(tokenTime).getTime() : null;
     const now = Date.now();
 
-    // Check if token doesn't exist, time isn't set, or time is now/past
-    if (!token || !tokenTimestamp || tokenTimestamp <= now) {
-      const response = await auth_token.run();
+    // Check if token doesn't exist or is expired/nearing expiration (add 30s buffer)
+    if (!token || !tokenTimestamp || tokenTimestamp <= (now + 30000)) {
+      this.refreshPromise = (async () => {
+        try {
+          const response = await auth_token.run();
+          const expiresInSeconds = response.expires_in || 3000;
+          const expirationDate = new Date(Date.now() + expiresInSeconds * 1000).toISOString();
 
-      // Get expiry duration from API (e.g., response.expires_in seconds), or fallback (e.g., 3600s / 1hr)
-      const expiresInSeconds = response.expires_in || 3000;
-      const expirationDate = new Date(now + expiresInSeconds * 1000).toISOString();
+          await storeValue('bearerToken', response.access_token);
+          await storeValue('bearerTokenTime', expirationDate);
 
-      await storeValue('bearerToken', response.access_token);
-      await storeValue('bearerTokenTime', expirationDate);
+          return response.access_token;
+        } finally {
+          this.refreshPromise = null;
+        }
+      })();
 
-      console.log('New token acquired:', appsmith.store);
-      return response.access_token;
+      return await this.refreshPromise;
     }
 
-    console.log('Using existing valid token');
     return token;
   }
-}
-
-	
+};

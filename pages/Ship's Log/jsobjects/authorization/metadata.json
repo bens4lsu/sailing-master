@@ -6,6 +6,11 @@
     "pageId": "Ship's Log",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "refreshPromise",
+        "value": "null"
+      }
+    ]
   }
 }
