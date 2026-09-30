@@ -1,6 +1,4 @@
 export default {
-	contactData: [],
-	
   async tableInit() {
     await authorization.refreshTokenIfNeeded();
 
@@ -20,22 +18,19 @@ export default {
   },
 
   getFilteredData() {
-		// If the query is actively loading or has no data yet, return an empty list immediately
-		if (qryContacts.isLoading || !qryContacts.data) {
-			return [];
-		}
-		
+    // If the query is actively loading or has no data yet, return an empty list immediately
+    if (qryContacts.isLoading || !qryContacts.data) {
+      return [];
+    }
+
     const filter = appsmith.store.contactFilter || "all";
     const raw = qryContacts.data;
     const contactData = Array.isArray(raw) ? raw : (Array.isArray(raw?.data) ? raw.data : []);
-    let filteredData = [];
 
     if (!filter || filter === "all") {
-      filteredData = contactData;
-    } else {
-      filteredData = contactData.filter(e => e?.contact_type_id == filter);
+      return contactData;
     }
 
-    return filteredData;
+    return contactData.filter(e => String(e?.contact_type_id) === String(filter));
   }
-}
+};
