@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{appsmith.store.inventoryPayload}}",
+      "body": "{{ this.params.payload }}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

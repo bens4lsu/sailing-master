@@ -41,13 +41,13 @@
     "customColumn3",
     "details"
   ],
-  "columnUpdatedAt": 1789589154638,
+  "columnUpdatedAt": 1790800166892,
   "columnWidthMap": {
     "customColumn1": 65,
     "customColumn2": 60,
     "customColumn3": 68.9375,
     "details": 177,
-    "part": 166
+    "part": 194
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -259,7 +259,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = tblInventory.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ((currentRow[\"details\"])) : (currentRow[\"details\"] })()}}",
+      "computedValue": "{{(() => { const tableData = tblInventory.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -275,7 +275,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "details",
       "notation": "standard",
       "originalId": "details",

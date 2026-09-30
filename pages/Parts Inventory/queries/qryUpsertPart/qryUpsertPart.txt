@@ -1,1 +1,1 @@
-{{appsmith.store.inventoryPayload}}
+{{ this.params.payload }}
