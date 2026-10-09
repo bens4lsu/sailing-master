@@ -25,8 +25,9 @@ export default {
 			return item.title;
 		}
 		else {
-			return `      <a href="${item.url}">${item.title}</a>`;
+			//return `      <a href="${item.url}">${item.title}</a>`;
+			return `      ${item.title}`;
 		}
 	}
-  
+
 }
