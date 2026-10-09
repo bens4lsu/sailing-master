@@ -20,10 +20,9 @@ export default {
   },
 
   getFilteredData() {
-		// If the query is actively loading or has no data yet, return an empty list immediately
-		if (qryVesselLog.isLoading || !qryVesselLog.data) {
-			return [];
-		}
+    if (qryVesselLog.isLoading || !qryVesselLog.data) {
+      return [];
+    }
 		
     const filter = appsmith.store.tableFilter || "all";
     const raw = qryVesselLog.data;
@@ -56,4 +55,4 @@ export default {
       return dateB - dateA;
     });
   }
-}
+};

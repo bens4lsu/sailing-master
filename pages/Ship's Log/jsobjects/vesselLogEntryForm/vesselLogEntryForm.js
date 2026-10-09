@@ -1,17 +1,18 @@
 export default {
-	
-	formatToOneDecimal: (inputValue) => {
+	isBusy: false,
+
+	formatToOneDecimal(inputValue) {
 		const num = parseFloat(inputValue);
 		if (isNaN(num)) {
-			return ""; // Fallback value for invalid inputs
+			return "";
 		}
 		return num.toFixed(1);
 	},
 	
-	formatNegativeCompass: (inputValue) => {
-		var num = parseInt(inputValue);
+	formatNegativeCompass(inputValue) {
+		let num = parseInt(inputValue);
 		if (isNaN(num) || num < -180 || num > 360) {
-			return ""; // Fallback value for invalid inputs
+			return "";
 		}
 		if (num < 0) {
 			num += 360;
@@ -22,102 +23,14 @@ export default {
 		return num.toString();
 	},
 	
-	handleNewClick: async () => {
-		const dt = this.getDeviceFormattedDate(); 
-		
-		await appsmith.geolocation.getCurrentPosition();
-		await storeValue('formDefaults', {
-			id: crypto.randomUUID(), 
-			"title": dt,
-			"entry_datetime": dt,
-			latitude: appsmith.geolocation.currentPosition.coords.latitude,
-			longitude: appsmith.geolocation.currentPosition.coords.longitude,
-			engine_status: "",
-			"stw": "",
-			"sog": "",
-			"heading": "",
-			"cog": "",
-			"overdrive": "",
-			"rpm": "",
-			"temp": "",
-			"hours": "",
-			"fuel": "",
-			"mileage": "",
-			"main_sail": "",
-			"storm_jib": "",
-			"genoa": "",
-			"code_zero": "",
-			"wind_speed": "",
-			"barometer": "",
-			"true_wind_direction": "",
-			"true_wind_angle": "",
-			"sea_state": "",
-			"weather": "",
-			"house_battery_life": "",
-			"watermaker": "",
-			"temp_cabin": "",
-			"temp_tech_room": "",
-			"tack": "",
-			"heel_angle": "",
-			"point_of_sail": "",
-			"water_starboard": "",
-			"water_port": "",
-			"narrative": ""
-		}); 
-		if (Custom1.model?.isNarrow) {
-      showModal(logEntryModalNarrow.name);
-    } else {
-      showModal(logEntryModal.name);
+	nullIfBlank(str) {
+		if (typeof str === "string") {
+			return str.trim() === "" ? null : str;
 		}
+		return str;
 	},
-	
-	handleEditClick: async (rowData) => {
-		await storeValue('formDefaults', {
-			id: rowData.id || "ERROR", 
-			"title": rowData.title || "",
-			"entry_datetime": rowData.entry_datetime || "",
-			latitude: rowData.latitude || "",
-			longitude: rowData.longitude || "",
-			engine_status: rowData.engine_status || "",
-			"stw": rowData.stw || "",
-			"sog": rowData.sog || "",
-			"heading": rowData.heading || "",
-			"cog": rowData.cog || "",
-			"overdrive": rowData.overdrive || "",
-			"rpm": rowData.rpm || "",
-			"temp": rowData.temp || "",
-			"hours": rowData.hours || "",
-			"fuel": rowData.fuel || "",
-			"mileage": rowData.mileage || "",
-			"main_sail": rowData.main_sail || "",
-			"storm_jib": rowData.storm_jib || "",
-			"genoa": rowData.genoa || "",
-			"code_zero": rowData.code_zero || "",
-			"wind_speed": rowData.wind_speed || "",
-			"barometer": rowData.barometer || "",
-			"true_wind_direction": rowData.true_wind_direction || "",
-			"true_wind_angle": rowData.true_wind_angle || "",
-			"sea_state": rowData.sea_state || "",
-			"weather": rowData.weather || "",
-			"house_battery_life": rowData.house_battery_life || "",
-			"watermaker": rowData.watermaker || "",
-			"temp_cabin": rowData.temp_cabin || "",
-			"temp_tech_room": rowData.temp_tech_room || "",
-			"tack": rowData.tack || "",
-			"heel_angle": rowData.heel_angle || "",
-			"point_of_sail": rowData.point_of_sail || "",
-			"water_starboard": rowData.water_starboard || "",
-			"water_port": rowData.water_port || "",
-			"narrative": rowData.narrative || ""
-		}); 
-		if (Custom1.model?.isNarrow) {
-      showModal(logEntryModalNarrow.name);
-    } else {
-      showModal(logEntryModal.name);
-		}
-	},
-	
-	getDeviceFormattedDate: () => {
+
+	getDeviceFormattedDate() {
 		const now = new Date();
 		const formatter = new Intl.DateTimeFormat('en-US', {
 			year: 'numeric',
@@ -142,17 +55,130 @@ export default {
 
 		return `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}:${p.second} ${formattedOffset}`;
 	},
+
+	async handleNewClick() {
+		if (this.isBusy) return;
+		this.isBusy = true;
+
+		try {
+			const dt = this.getDeviceFormattedDate(); 
+			
+			try {
+				await appsmith.geolocation.getCurrentPosition();
+			} catch (geoErr) {
+				console.log("Geolocation lookup failed or timed out:", geoErr);
+			}
+
+			const coords = appsmith.geolocation?.currentPosition?.coords;
+
+			await storeValue('formDefaults', {
+				id: crypto.randomUUID(), 
+				"title": dt,
+				"entry_datetime": dt,
+				latitude: coords?.latitude || "",
+				longitude: coords?.longitude || "",
+				engine_status: "",
+				"stw": "",
+				"sog": "",
+				"heading": "",
+				"cog": "",
+				"overdrive": "",
+				"rpm": "",
+				"temp": "",
+				"hours": "",
+				"fuel": "",
+				"mileage": "",
+				"main_sail": "",
+				"storm_jib": "",
+				"genoa": "",
+				"code_zero": "",
+				"wind_speed": "",
+				"barometer": "",
+				"true_wind_direction": "",
+				"true_wind_angle": "",
+				"sea_state": "",
+				"weather": "",
+				"house_battery_life": "",
+				"watermaker": "",
+				"temp_cabin": "",
+				"temp_tech_room": "",
+				"tack": "",
+				"heel_angle": "",
+				"point_of_sail": "",
+				"water_starboard": "",
+				"water_port": "",
+				"narrative": ""
+			}); 
+
+			if (Custom1.model?.isNarrow) {
+				showModal(logEntryModalNarrow.name);
+			} else {
+				showModal(logEntryModal.name);
+			}
+		} finally {
+			this.isBusy = false;
+		}
+	},
 	
-	upsertPayload: async () => {
-	  const dt = this.getDeviceFormattedDate();
-		const user = await appsmith.store.userData.name;
-		const payload = {
+	async handleEditClick(rowData) {
+		if (this.isBusy) return;
+
+		await storeValue('formDefaults', {
+			id: rowData?.id || "ERROR", 
+			"title": rowData?.title || "",
+			"entry_datetime": rowData?.entry_datetime || "",
+			latitude: rowData?.latitude || "",
+			longitude: rowData?.longitude || "",
+			engine_status: rowData?.engine_status || "",
+			"stw": rowData?.stw || "",
+			"sog": rowData?.sog || "",
+			"heading": rowData?.heading || "",
+			"cog": rowData?.cog || "",
+			"overdrive": rowData?.overdrive || "",
+			"rpm": rowData?.rpm || "",
+			"temp": rowData?.temp || "",
+			"hours": rowData?.hours || "",
+			"fuel": rowData?.fuel || "",
+			"mileage": rowData?.mileage || "",
+			"main_sail": rowData?.main_sail || "",
+			"storm_jib": rowData?.storm_jib || "",
+			"genoa": rowData?.genoa || "",
+			"code_zero": rowData?.code_zero || "",
+			"wind_speed": rowData?.wind_speed || "",
+			"barometer": rowData?.barometer || "",
+			"true_wind_direction": rowData?.true_wind_direction || "",
+			"true_wind_angle": rowData?.true_wind_angle || "",
+			"sea_state": rowData?.sea_state || "",
+			"weather": rowData?.weather || "",
+			"house_battery_life": rowData?.house_battery_life || "",
+			"watermaker": rowData?.watermaker || "",
+			"temp_cabin": rowData?.temp_cabin || "",
+			"temp_tech_room": rowData?.temp_tech_room || "",
+			"tack": rowData?.tack || "",
+			"heel_angle": rowData?.heel_angle || "",
+			"point_of_sail": rowData?.point_of_sail || "",
+			"water_starboard": rowData?.water_starboard || "",
+			"water_port": rowData?.water_port || "",
+			"narrative": rowData?.narrative || ""
+		}); 
+
+		if (Custom1.model?.isNarrow) {
+			showModal(logEntryModalNarrow.name);
+		} else {
+			showModal(logEntryModal.name);
+		}
+	},
+	
+	upsertPayload() {
+		const dt = this.getDeviceFormattedDate();
+		const user = appsmith.store.userData?.name || "";
+		return {
 			"id": inpId.text,
-			"vessel_id": appsmith.store.vessel.id,
+			"vessel_id": appsmith.store.vessel?.id,
 			"title": inpTitle.text,
 			"entry_datetime": inpTime.text,
 			"latitude": this.nullIfBlank(inpLat.text),
-			"longitude" : this.nullIfBlank(inpLong.text),
+			"longitude": this.nullIfBlank(inpLong.text),
 			"stw": this.nullIfBlank(inpSTW.text),
 			"sog": this.nullIfBlank(inpSOG.text),
 			"heading": this.nullIfBlank(inpHeading.text),
@@ -187,21 +213,20 @@ export default {
 			"created_datetime": dt,
 			"created_user": user,
 			"modified_datetime": dt,
-			"modified_user": user,
+			"modified_user": user
 		};
-		return payload;
 	},
 	
-	upsertPayloadNarrow: async () => {
-	  const dt = this.getDeviceFormattedDate();
-		const user = await appsmith.store.userData.name;
-		const payload = {
+	upsertPayloadNarrow() {
+		const dt = this.getDeviceFormattedDate();
+		const user = appsmith.store.userData?.name || "";
+		return {
 			"id": inpIdCopy.text,
-			"vessel_id": appsmith.store.vessel.id,
+			"vessel_id": appsmith.store.vessel?.id,
 			"title": inpTitleCopy.text,
 			"entry_datetime": inpTimeCopy.text,
 			"latitude": this.nullIfBlank(inpLatCopy.text),
-			"longitude" : this.nullIfBlank(inpLongCopy.text),
+			"longitude": this.nullIfBlank(inpLongCopy.text),
 			"stw": this.nullIfBlank(inpSTWCopy.text),
 			"sog": this.nullIfBlank(inpSOGCopy.text),
 			"heading": this.nullIfBlank(inpHeadingCopy.text),
@@ -238,55 +263,70 @@ export default {
 			"modified_datetime": dt,
 			"modified_user": user
 		};
-		return payload;
 	},
 	
-	nullIfBlank: (str) => {
-    if (typeof str === "string") {
-        return str.trim() === "" ? null : str;
-    } else {
-        return str;
-    }
-	},
-	
-	submitLogUpdate: async () => {
-		await authorization.refreshTokenIfNeeded(); 
-		await storeValue('upsertPayload', this.upsertPayload())
-		await qryUpsertLogEntry.run();
-		await vesselLog.getLogDataFromDB();
-		closeModal(logEntryModal.name);
-	},
-	
-	submitLogUpdateNarrow: async () => {
-		await authorization.refreshTokenIfNeeded(); 
-		await storeValue('upsertPayload', this.upsertPayloadNarrow())
-		await qryUpsertLogEntry.run();
-		await vesselLog.getLogDataFromDB();
-		closeModal(logEntryModalNarrow.name);
-	},
-	
-	submitLogDelete: async (modalType) => {
-		await authorization.refreshTokenIfNeeded(); 
-		var deletePayload = {id: null};
-		
-		if (typeof logEntryModal !== "undefined" && modalType === 'wide') {
-			deletePayload.id = inpId.text;
-		}
-		
-		if (typeof logEntryModalNarrow !== "undefined" && modalType === 'narrow') {
-			deletePayload.id = inpIdCopy.text;
-		}
-		
-	  await storeValue('deletePayload', deletePayload)
-		await qryDeleteLogEntry.run();
-		await vesselLog.getLogDataFromDB();
+	async submitLogUpdate() {
+		if (this.isBusy) return;
+		this.isBusy = true;
 
-		if (typeof logEntryModal !== "undefined" && modalType === 'wide') {
+		try {
+			await authorization.refreshTokenIfNeeded(); 
+			const payload = this.upsertPayload();
+			await storeValue('upsertPayload', payload);
+			await qryUpsertLogEntry.run();
 			closeModal(logEntryModal.name);
+			await vesselLog.getLogDataFromDB();
+		} finally {
+			this.isBusy = false;
 		}
+	},
+	
+	async submitLogUpdateNarrow() {
+		if (this.isBusy) return;
+		this.isBusy = true;
 
-		if (typeof logEntryModalNarrow !== "undefined" && modalType === 'narrow') {
+		try {
+			await authorization.refreshTokenIfNeeded(); 
+			const payload = this.upsertPayloadNarrow();
+			await storeValue('upsertPayload', payload);
+			await qryUpsertLogEntry.run();
 			closeModal(logEntryModalNarrow.name);
+			await vesselLog.getLogDataFromDB();
+		} finally {
+			this.isBusy = false;
+		}
+	},
+	
+	async submitLogDelete(modalType) {
+		if (this.isBusy) return;
+		this.isBusy = true;
+
+		try {
+			await authorization.refreshTokenIfNeeded(); 
+			const deletePayload = { id: null };
+			
+			if (typeof logEntryModal !== "undefined" && modalType === 'wide') {
+				deletePayload.id = inpId.text;
+			}
+			
+			if (typeof logEntryModalNarrow !== "undefined" && modalType === 'narrow') {
+				deletePayload.id = inpIdCopy.text;
+			}
+			
+			await storeValue('deletePayload', deletePayload);
+			await qryDeleteLogEntry.run();
+
+			if (typeof logEntryModal !== "undefined" && modalType === 'wide') {
+				closeModal(logEntryModal.name);
+			}
+
+			if (typeof logEntryModalNarrow !== "undefined" && modalType === 'narrow') {
+				closeModal(logEntryModalNarrow.name);
+			}
+
+			await vesselLog.getLogDataFromDB();
+		} finally {
+			this.isBusy = false;
 		}
 	}
-}
+};
