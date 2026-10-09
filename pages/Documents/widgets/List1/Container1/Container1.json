@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
-  "backgroundColor": "white",
-  "borderColor": "#E0DEDE",
+  "backgroundColor": "{{currentItem.isHeader ? \"#e0dede\" : \"#ffffff\"}}",
+  "borderColor": "#71717a",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
   "bottomRow": 6,
@@ -59,9 +59,18 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "backgroundColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isDeletable": false,
